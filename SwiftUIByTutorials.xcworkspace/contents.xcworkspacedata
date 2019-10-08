@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <Group
+      location = "group:02-getting-started"
+      name = "02-getting-started">
+      <FileRef
+         location = "group:RGBBullsEye/RGBBullsEye.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

@@ -10,4 +10,7 @@ _Projects, playgrounds, and other materials made while following along with the 
 # Contents
 
 - [Chapter 2: Getting Started](./02-getting-started)
-    -
+    - Building a slider-based RGB color guessing game
+    <img src="./02-getting-started/RGBBullsEye/Screenshots/recording-1.gif" width="600px"/>
+
+- [Chapter 3: Understanding SwiftUI](./03-understanding-swiftui)
