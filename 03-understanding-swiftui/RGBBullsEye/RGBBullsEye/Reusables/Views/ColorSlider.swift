@@ -31,6 +31,9 @@ struct ColorSlider: View {
         ) {
             label
         }
+        .accentColor(component)
+//        .background(component)
+        .cornerRadius(12)
     }
 }
 

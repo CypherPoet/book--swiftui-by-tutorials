@@ -20,46 +20,60 @@ struct MainView: View {
     
     @State private var isShowingAnswerAlert: Bool = false
     
+    @ObservedObject var timer = TimeCounter()
+    
     
     var body: some View {
-        VStack(spacing: 20) {
-            
-            HStack(spacing: 12) {
-                VStack {
-                    targetColor
-                    Text("Match This Color")
-                        .font(.callout)
+            VStack(spacing: 20) {
+                
+                ZStack(alignment: .center) {
+                    HStack(spacing: 12) {
+                        VStack {
+                            targetColor
+                            Text("Match This Color")
+                                .font(.callout)
+                        }
+                        
+                        VStack {
+                            guessedColor
+                            currentGuessLabel
+                        }
+                    }
+                    
+                    Text(String(timer.counter))
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(12)
+                        .background(Color.black.opacity(1))
+                        .mask(Circle())
+                        .foregroundColor(Color.white)
                 }
                 
-                VStack {
-                    guessedColor
-                    currentGuessLabel
+                Button(action: {
+                    self.timer.killTimer()
+                    self.isShowingAnswerAlert = true
+                }) {
+                   Text("Check Guess")
                 }
-            }
-            
-            Button(action: {
-                self.isShowingAnswerAlert = true
-            }) {
-               Text("Check Guess")
-            }
-            
-            ColorSliders(
-                currentRed: $guessedRed,
-                currentGreen: $guessedGreen,
-                currentBlue: $guessedBlue
-            )
-            .padding(.horizontal)
-        }
-        .alert(isPresented: $isShowingAnswerAlert) {
-            Alert(
-                title: Text("Alert"),
-                message:
-                    Text(answerMessage)
-                    + Text("\n\nYou earned \(scoreForAnswer) points!")
                 
-            )
-        }
-        .padding()
+                ColorSliders(
+                    currentRed: $guessedRed,
+                    currentGreen: $guessedGreen,
+                    currentBlue: $guessedBlue
+                )
+                    .padding(.horizontal)
+            }
+            .alert(isPresented: $isShowingAnswerAlert) {
+                Alert(
+                    title: Text("Alert"),
+                    message:
+                        Text(answerMessage)
+                        + Text("\n\nYou earned \(scoreForAnswer) points!")
+                    
+                )
+            }
+            .padding()
+            .environment(\.horizontalSizeClass, .compact)
     }
 }
 
@@ -110,7 +124,12 @@ extension MainView {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-            .previewLayout(.iPhoneSELandscape)
+        
+        Group {
+            MainView()
+                .previewLayout(.iPhoneSELandscape)
+            
+            MainView()
+        }
     }
 }

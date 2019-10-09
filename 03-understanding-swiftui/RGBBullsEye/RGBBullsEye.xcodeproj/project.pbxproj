@@ -10,6 +10,7 @@
 		F378CA44234C1AA3004CDF9E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378CA43234C1AA3004CDF9E /* MainView.swift */; };
 		F378CA47234C4E46004CDF9E /* ColorSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378CA46234C4E46004CDF9E /* ColorSliders.swift */; };
 		F378CA49234C6037004CDF9E /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378CA48234C6037004CDF9E /* ColorSlider.swift */; };
+		F378CA90234DA6D7004CDF9E /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F378CA8F234DA6D7004CDF9E /* TimeCounter.swift */; };
 		F3B43C7E2349B6D900BD2648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B43C7D2349B6D900BD2648 /* AppDelegate.swift */; };
 		F3B43C802349B6D900BD2648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B43C7F2349B6D900BD2648 /* SceneDelegate.swift */; };
 		F3B43C842349B6DB00BD2648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B43C832349B6DB00BD2648 /* Assets.xcassets */; };
@@ -22,13 +23,13 @@
 		F378CA43234C1AA3004CDF9E /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F378CA46234C4E46004CDF9E /* ColorSliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliders.swift; sourceTree = "<group>"; };
 		F378CA48234C6037004CDF9E /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
+		F378CA8F234DA6D7004CDF9E /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		F3B43C7A2349B6D900BD2648 /* RGBBullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBBullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B43C7D2349B6D900BD2648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B43C7F2349B6D900BD2648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3B43C832349B6DB00BD2648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B43C862349B6DB00BD2648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3B43C892349B6DB00BD2648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F3B43C8B2349B6DB00BD2648 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = Scenes/MainView.swift; sourceTree = "<group>"; };
 		F3B43CBE234B101F00BD2648 /* PreviewLayout+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewLayout+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +72,6 @@
 		F3B43C7C2349B6D900BD2648 /* RGBBullsEye */ = {
 			isa = PBXGroup;
 			children = (
-				F3B43C8B2349B6DB00BD2648 /* MainView.swift */,
 				F3B43C7D2349B6D900BD2648 /* AppDelegate.swift */,
 				F3B43C7F2349B6D900BD2648 /* SceneDelegate.swift */,
 				F3B43C882349B6DB00BD2648 /* LaunchScreen.storyboard */,
@@ -112,6 +112,7 @@
 			children = (
 				F378CA45234C1B34004CDF9E /* Views */,
 				F3B43CBD234B101100BD2648 /* Extensions */,
+				F378CA8F234DA6D7004CDF9E /* TimeCounter.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -200,6 +201,7 @@
 				F3B43C802349B6D900BD2648 /* SceneDelegate.swift in Sources */,
 				F3B43CBF234B101F00BD2648 /* PreviewLayout+Utils.swift in Sources */,
 				F378CA49234C6037004CDF9E /* ColorSlider.swift in Sources */,
+				F378CA90234DA6D7004CDF9E /* TimeCounter.swift in Sources */,
 				F378CA47234C4E46004CDF9E /* ColorSliders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

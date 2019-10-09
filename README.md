@@ -14,3 +14,4 @@ _Projects, playgrounds, and other materials made while following along with the 
     <img src="./02-getting-started/RGBBullsEye/Screenshots/recording-1.gif" width="600px"/>
 
 - [Chapter 3: Understanding SwiftUI](./03-understanding-swiftui)
+    - Declarative app development and the tools offered by SwiftUI to facilitate it.
