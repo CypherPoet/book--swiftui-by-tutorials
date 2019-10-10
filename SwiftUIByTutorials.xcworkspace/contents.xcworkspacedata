@@ -15,6 +15,13 @@
          location = "group:03-understanding-swiftui/RGBBullsEye/RGBBullsEye.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "container:"
+      name = "04-integrating-swiftui">
+      <FileRef
+         location = "group:04-integrating-swiftui/RGBBullsEye/RGBBullsEye.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>

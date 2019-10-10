@@ -15,3 +15,7 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 3: Understanding SwiftUI](./03-understanding-swiftui)
     - Declarative app development and the tools offered by SwiftUI to facilitate it.
+
+
+- [Chapter 4: Integrating SwiftUI](./04-integrating-swiftui)
+
