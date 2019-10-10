@@ -19,19 +19,19 @@ struct ColorSliders: View {
         VStack(spacing: 12) {
             
             ColorSlider(
-                component: .red,
+                channelColor: .systemRed,
                 componentValue: $currentRed,
                 label: Text("Current guess of the Red component")
             )
             
             ColorSlider(
-                component: .green,
+                channelColor: .systemGreen,
                 componentValue: $currentGreen,
                 label: Text("Current guess of the Green component")
             )
             
             ColorSlider(
-                component: .blue,
+                channelColor: .systemBlue,
                 componentValue: $currentBlue,
                 label: Text("Current guess of the Blue component")
             )

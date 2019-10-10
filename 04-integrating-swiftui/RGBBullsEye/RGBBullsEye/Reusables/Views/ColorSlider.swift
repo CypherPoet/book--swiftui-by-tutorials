@@ -10,7 +10,9 @@ import SwiftUI
 
 
 struct ColorSlider: View {
-    let component: Color
+    /// The color corresponding to this slider's color "channel" (e.g.: Red, Green, or Blue)
+    let channelColor: UIColor
+    
     @Binding var componentValue: Double
 
     let minValue: Double = 0
@@ -19,21 +21,17 @@ struct ColorSlider: View {
 
     
     var body: some View {
-        Slider(
-            value: $componentValue,
-            in: 0.0...1.0,
-            minimumValueLabel: Text(String(Int(minValue)))
-                .foregroundColor(component)
-                .fontWeight(.bold),
-            maximumValueLabel: Text(String(Int(maxValue)))
-                .foregroundColor(component)
+        HStack {
+            Text("0")
                 .fontWeight(.bold)
-        ) {
-            label
+                .foregroundColor(Color(channelColor))
+            
+            ColorUISlider(color: channelColor, currentValue: $componentValue)
+            
+            Text("255")
+                .fontWeight(.bold)
+                .foregroundColor(Color(channelColor))
         }
-        .accentColor(component)
-//        .background(component)
-        .cornerRadius(12)
     }
 }
 
@@ -41,7 +39,7 @@ struct ColorSlider: View {
 struct ColorSlider_Previews: PreviewProvider {
     static var previews: some View {
         ColorSlider(
-            component: .red,
+            channelColor: .systemRed,
             componentValue: .constant(0.33),
             label: Text("Current guess of the Red component")
         )
