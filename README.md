@@ -18,4 +18,6 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 
 - [Chapter 4: Integrating SwiftUI](./04-integrating-swiftui)
-
+    - Wrapping SwiftUI views in UIKit views
+    - Wrapping UIKit views in SwiftUI views
+    - Using `Coordinator`s inside of `UIViewRepresentable` types to store data bound across SwiftUI and UIKit.
