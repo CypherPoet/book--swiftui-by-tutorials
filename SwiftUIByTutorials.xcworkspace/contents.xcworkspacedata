@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
    <Group
       location = "group:02-getting-started"
       name = "02-getting-started">
@@ -22,7 +25,14 @@
          location = "group:04-integrating-swiftui/RGBBullsEye/RGBBullsEye.xcodeproj">
       </FileRef>
    </Group>
-   <FileRef
-      location = "group:README.md">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "05-the-apple-ecosystem">
+      <FileRef
+         location = "group:05-the-apple-ecosystem/RGBBullsEye/../BullsEyePlus/BullsEyePlus.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:05-the-apple-ecosystem/RGBBullsEye/RGBBullsEye.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

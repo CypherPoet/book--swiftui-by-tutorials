@@ -21,3 +21,5 @@ _Projects, playgrounds, and other materials made while following along with the 
     - Wrapping SwiftUI views in UIKit views
     - Wrapping UIKit views in SwiftUI views
     - Using `Coordinator`s inside of `UIViewRepresentable` types to store data bound across SwiftUI and UIKit.
+
+- [Chapter 5: The Apple Ecosystem](./05-the-apple-ecosystem)
