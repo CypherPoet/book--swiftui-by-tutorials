@@ -29,7 +29,8 @@
 import SwiftUI
 import Game
 
-struct ContentView: View {
+
+struct GameViewTests: View {
     @ObservedObject private var game = BullsEyeGame()
     
     @State private var currentValue = 50.0
@@ -71,9 +72,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews : PreviewProvider {
+struct GameViewTests_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GameViewTests()
         //      .previewLayout(.fixed(width: 568, height: 320))
     }
 }

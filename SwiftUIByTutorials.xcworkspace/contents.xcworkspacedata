@@ -28,6 +28,16 @@
    <Group
       location = "container:"
       name = "05-the-apple-ecosystem">
+      <Group
+         location = "group:05-the-apple-ecosystem/RGBBullsEye/../../Packages"
+         name = "Packages">
+         <FileRef
+            location = "group:Game">
+         </FileRef>
+         <FileRef
+            location = "group:GameView">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:05-the-apple-ecosystem/RGBBullsEye/../BullsEyePlus/BullsEyePlus.xcodeproj">
       </FileRef>

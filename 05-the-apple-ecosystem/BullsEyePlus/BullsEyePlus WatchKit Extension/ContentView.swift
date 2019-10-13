@@ -27,6 +27,8 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import Game
+
 
 struct ContentView: View {
     @ObservedObject private var game = BullsEyeGame()
@@ -40,15 +42,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Put the Bull's Eye as close as you can to: \(game.targetValue)")
+            Text("Aim For: \(game.targetValue)")
+            
+            
             HStack {
                 Text("0")
-                Slider(value: $currentValue, in: 1.0...100.0, step: 1.0)
+                Slider(value: $currentValue, in: 1.0...100.0)
+                    .digitalCrownRotation($currentValue, from: 1.0, through: 100.0)
                     .background(Color.blue)
                     .opacity(alpha)
                 Text("100")
             }
             .padding(.horizontal)
+            
+            
             Button(action: {
                 self.showAlert = true
                 self.game.checkGuess(Int(self.currentValue))
@@ -62,8 +69,10 @@ struct ContentView: View {
                       }))
             }
             .padding()
+            
+            
             HStack {
-                Text("Total Score: \(game.scoreTotal)")
+                Text("Total: \(game.scoreTotal)")
                 Text("Round: \(game.round)")
             }
         }

@@ -31,6 +31,7 @@ extension Game {
     var targetColor: Color { .init(red: targetRed, green: targetGreen, blue: targetBlue) }
 }
 
+
 extension Game {
     typealias Answer = (red: Double, green: Double, blue: Double)
     
