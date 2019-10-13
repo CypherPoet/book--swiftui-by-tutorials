@@ -3,5 +3,5 @@ import XCTest
 import GameViewTests
 
 var tests = [XCTestCaseEntry]()
-tests += GameViewTests.allTests()
+tests += GameViewKitTests.allTests()
 XCTMain(tests)

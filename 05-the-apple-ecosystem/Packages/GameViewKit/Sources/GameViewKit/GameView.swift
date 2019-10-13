@@ -30,7 +30,7 @@ import SwiftUI
 import Game
 
 
-struct GameViewTests: View {
+public struct GameView: View {
     @ObservedObject private var game = BullsEyeGame()
     
     @State private var currentValue = 50.0
@@ -40,7 +40,9 @@ struct GameViewTests: View {
         abs(Double(game.targetValue) - currentValue) / 100.0
     }
     
-    var body: some View {
+    public init() {}
+    
+    public var body: some View {
         VStack {
             Text("Put the Bull's Eye as close as you can to: \(game.targetValue)")
             HStack {
@@ -74,7 +76,7 @@ struct GameViewTests: View {
 
 struct GameViewTests_Previews : PreviewProvider {
     static var previews: some View {
-        GameViewTests()
+        GameView()
         //      .previewLayout(.fixed(width: 568, height: 320))
     }
 }

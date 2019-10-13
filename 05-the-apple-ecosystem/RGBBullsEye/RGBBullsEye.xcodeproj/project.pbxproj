@@ -35,6 +35,8 @@
 		F3B43C862349B6DB00BD2648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3B43C892349B6DB00BD2648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3B43CBE234B101F00BD2648 /* PreviewLayout+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewLayout+Utils.swift"; sourceTree = "<group>"; };
+		F3C87F842353CC9F000EEBA2 /* GameViewKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GameViewKit; path = ../../GameViewKit; sourceTree = "<group>"; };
+		F3C87F852353CCA0000EEBA2 /* Game */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Game; path = ../../Game; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 		F3B43C712349B6D900BD2648 = {
 			isa = PBXGroup;
 			children = (
+				F3C87F852353CCA0000EEBA2 /* Game */,
+				F3C87F842353CC9F000EEBA2 /* GameViewKit */,
 				F3B43C7B2349B6D900BD2648 /* Products */,
 				F3B43C7C2349B6D900BD2648 /* RGBBullsEye */,
 			);

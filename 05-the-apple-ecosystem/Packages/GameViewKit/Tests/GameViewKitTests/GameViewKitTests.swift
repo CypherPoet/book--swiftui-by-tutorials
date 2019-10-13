@@ -1,10 +1,11 @@
 import XCTest
-@testable import GameView
+@testable import GameViewKit
 
-final class GameViewTests: XCTestCase {
+
+final class GameViewKitTests: XCTestCase {
     
     func testInit() {
-        XCTAssertNotNil(GameViewTests())
+        XCTAssertNotNil(GameViewKitTests())
     }
 
     static var allTests = [
