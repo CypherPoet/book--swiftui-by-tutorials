@@ -38,4 +38,11 @@
          location = "group:05-the-apple-ecosystem/RGBBullsEye/RGBBullsEye.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "container:"
+      name = "06-intro-to-controls-text-and-image">
+      <FileRef
+         location = "group:06-intro-to-controls-text-and-image/Kuchi/Kuchi.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

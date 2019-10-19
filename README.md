@@ -23,3 +23,16 @@ _Projects, playgrounds, and other materials made while following along with the 
     - Using `Coordinator`s inside of `UIViewRepresentable` types to store data bound across SwiftUI and UIKit.
 
 - [Chapter 5: The Apple Ecosystem](./05-the-apple-ecosystem)
+    - Building Swift Packages and Sharing Functionality Across Projects
+    - Using SwiftUI across iOS, macOS, and tvOS.
+
+
+- [Chapter 6: Intro to Controls: Text & Image](./06-intro-to-controls-text-and-image)
+    -  
+    
+
+
+
+# Projects
+
+- (In Progress)

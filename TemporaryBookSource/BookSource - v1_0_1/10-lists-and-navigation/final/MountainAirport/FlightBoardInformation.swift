@@ -1,0 +1,113 @@
+/// Copyright (c) 2019 Razeware LLC
+/// 
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+/// 
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+/// 
+/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+/// distribute, sublicense, create a derivative work, and/or sell copies of the
+/// Software in any work that is designed, intended, or marketed for pedagogical or
+/// instructional purposes related to programming, coding, application development,
+/// or information technology.  Permission for such use, copying, modification,
+/// merger, publication, distribution, sublicensing, creation of derivative works,
+/// or sale is expressly withheld.
+/// 
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+
+import SwiftUI
+
+struct CheckInInfo: Identifiable {
+  let id = UUID()
+  let airline: String
+  let flight: String
+}
+
+struct FlightBoardInformation: View {
+  var flight: FlightInformation
+  @Binding var showModal: Bool
+  @State private var rebookAlert = false
+  @State private var checkInFlight: CheckInInfo?
+  @State private var showFlightHistory = false
+  
+  var body: some View {
+    VStack(alignment: .leading) {
+      HStack{
+        Text("\(flight.airline) Flight \(flight.number)")
+          .font(.largeTitle)
+        Spacer()
+        Button("Done") {
+          self.showModal = false
+        }
+      }
+      Text("\(flight.direction == .arrival ? "From: " : "To: ") \(flight.otherAirport)")
+      Text(flight.flightStatus)
+        .foregroundColor(Color(flight.timelineColor))
+      // 1
+      if flight.status == .cancelled {
+        // 2
+        Button("Rebook Flight") {
+          self.rebookAlert = true
+        }
+          // 3
+          .alert(isPresented: $rebookAlert) {
+            // 4
+            Alert(title: Text("Contact Your Airline"),
+                  message: Text("We cannot rebook this flight. Please contact the airline to reschedule this flight."))
+        }
+      }
+      if flight.direction == .departure &&
+        (flight.status == .ontime || flight.status == .delayed) {
+        Button("Check In for Flight") {
+          // 2
+          self.checkInFlight =
+            CheckInInfo(airline: self.flight.airline, flight: self.flight.number)
+        }
+          // 3
+          .actionSheet(item: $checkInFlight) { flight in
+            // 4
+            ActionSheet(title: Text("Check In"),
+                        message: Text("Check in for \(flight.airline) Flight \(flight.flight)"),
+                        // 5
+              buttons: [
+                // 6
+                .cancel(Text("Not Now")),
+                // 7
+                .destructive(Text("Reschedule"), action: {
+                  print("Reschedule flight.")
+                }),
+                // 8
+                .default(Text("Check In"), action: {
+                  print("Do check-in for \(flight.airline) \(flight.flight).")
+                })
+            ])
+        }
+      }
+      Button("On-Time History") {
+        self.showFlightHistory.toggle()
+      }
+      .popover(isPresented: $showFlightHistory, arrowEdge: .top) {
+        FlightTimeHistory(flight: self.flight)
+      }
+      Spacer()
+    }.font(.headline).padding(10)
+  }
+}
+
+struct FlightBoardInformation_Previews: PreviewProvider {
+  static var previews: some View {
+    FlightBoardInformation(flight: FlightInformation.generateFlight(0),
+                           showModal: .constant(true))
+  }
+}
