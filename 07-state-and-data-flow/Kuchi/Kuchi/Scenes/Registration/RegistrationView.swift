@@ -10,8 +10,9 @@ import SwiftUI
 
 
 struct RegistrationView: View {
-    @State private var userName: String = ""
-    @State private var isRegistered = false
+    @EnvironmentObject var user: User
+    
+    @State private var userNameValue = ""
 }
  
 
@@ -19,8 +20,8 @@ extension RegistrationView {
     
     var body: some View {
         Group {
-            if isRegistered {
-                WelcomeView(userName: userName)
+            if user.isRegistered {
+                WelcomeView()
             } else {
                 registrationForm
             }
@@ -32,10 +33,11 @@ extension RegistrationView {
 extension RegistrationView {
     
     private func registerUser() {
-        userName = userName.trimmingCharacters(in: .whitespacesAndNewlines)
+        let userName = userNameValue.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if !userName.isEmpty {
-            isRegistered = true
+            user.profile = .init(name: userName)
+            user.isRegistered = true
         }
     }
     
@@ -49,7 +51,7 @@ extension RegistrationView {
             
             Spacer()
             
-            TextField("Enter Your Name", text: $userName)
+            TextField("Enter Your Name", text: $userNameValue)
                 .multilineTextAlignment(.center)
     
     
@@ -72,5 +74,6 @@ extension RegistrationView {
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
+            .environmentObject(sampleUser)
     }
 }

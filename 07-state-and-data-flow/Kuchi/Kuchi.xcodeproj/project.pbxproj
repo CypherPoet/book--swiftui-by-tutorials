@@ -3,22 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F329403D235BD27300F70A4D /* LanguageLearning in Frameworks */ = {isa = PBXBuildFile; productRef = F329403C235BD27300F70A4D /* LanguageLearning */; };
 		F3562F7C2355347900BD7068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3562F7B2355347900BD7068 /* AppDelegate.swift */; };
 		F3562F7E2355347900BD7068 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3562F7D2355347900BD7068 /* SceneDelegate.swift */; };
 		F3562F822355347A00BD7068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3562F812355347A00BD7068 /* Assets.xcassets */; };
 		F3562F852355347A00BD7068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3562F842355347A00BD7068 /* Preview Assets.xcassets */; };
 		F3562F882355347A00BD7068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3562F862355347A00BD7068 /* LaunchScreen.storyboard */; };
 		F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3562F922355361F00BD7068 /* WelcomeView.swift */; };
+		F367BEB9235F045200FDEB0C /* DeckBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BEB8235F045200FDEB0C /* DeckBuilder.swift */; };
+		F367BEBC235F06E900FDEB0C /* CypherPoetCore in Frameworks */ = {isa = PBXBuildFile; productRef = F367BEBB235F06E900FDEB0C /* CypherPoetCore */; };
+		F367BEBE235F21EF00FDEB0C /* jp.json in Resources */ = {isa = PBXBuildFile; fileRef = F367BEBD235F21EF00FDEB0C /* jp.json */; };
+		F367BEC0235F233C00FDEB0C /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BEBF235F233C00FDEB0C /* QuestionView.swift */; };
+		F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BEC1235F234D00FDEB0C /* ScoreView.swift */; };
 		F380E2FD235823110048B6F3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380E2FC235823110048B6F3 /* RegistrationView.swift */; };
 		F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380E2FE23582B850048B6F3 /* EntryView.swift */; };
 		F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F9034235B0DE5000188A5 /* HomeView.swift */; };
+		F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A81235BD83A00F7C256 /* ProfileView.swift */; };
+		F3A34A86235BD86700F7C256 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A85235BD86700F7C256 /* ProgressView.swift */; };
+		F3A34A8A235BDDD600F7C256 /* User+Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A89235BDDD600F7C256 /* User+Profile.swift */; };
+		F3A34A8C235BDE1900F7C256 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A8B235BDE1900F7C256 /* User.swift */; };
+		F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A9C235D7A9600F7C256 /* ChallengeViewModel.swift */; };
+		F3A34A9F235D7AAE00F7C256 /* PracticeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A9E235D7AAE00F7C256 /* PracticeContainerView.swift */; };
+		F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34AA0235D82E400F7C256 /* ChallengeView.swift */; };
+		F3A34AA3235DAB4C00F7C256 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34AA2235DAB4C00F7C256 /* CongratulationsView.swift */; };
+		F3A34AA5235DB15F00F7C256 /* ChoicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34AA4235DB15F00F7C256 /* ChoicesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F329403B235BD25500F70A4D /* LanguageLearning */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LanguageLearning; path = Packages/LanguageLearning; sourceTree = "<group>"; };
+		F32963A4235BD2EF00F70A4D /* LanguageLearning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LanguageLearning; sourceTree = "<group>"; };
 		F3562F782355347900BD7068 /* Kuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3562F7B2355347900BD7068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3562F7D2355347900BD7068 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +44,22 @@
 		F3562F872355347A00BD7068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3562F892355347A00BD7068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3562F922355361F00BD7068 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F367BEB8235F045200FDEB0C /* DeckBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilder.swift; sourceTree = "<group>"; };
+		F367BEBD235F21EF00FDEB0C /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = jp.json; path = Resources/jp.json; sourceTree = SOURCE_ROOT; };
+		F367BEBF235F233C00FDEB0C /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		F367BEC1235F234D00FDEB0C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		F380E2FC235823110048B6F3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		F380E2FE23582B850048B6F3 /* EntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		F39F9034235B0DE5000188A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F3A34A81235BD83A00F7C256 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F3A34A85235BD86700F7C256 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		F3A34A89235BDDD600F7C256 /* User+Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Profile.swift"; sourceTree = "<group>"; };
+		F3A34A8B235BDE1900F7C256 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F3A34A9C235D7A9600F7C256 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
+		F3A34A9E235D7AAE00F7C256 /* PracticeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeContainerView.swift; sourceTree = "<group>"; };
+		F3A34AA0235D82E400F7C256 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		F3A34AA2235DAB4C00F7C256 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		F3A34AA4235DB15F00F7C256 /* ChoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F367BEBC235F06E900FDEB0C /* CypherPoetCore in Frameworks */,
+				F329403D235BD27300F70A4D /* LanguageLearning in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +78,10 @@
 		F3562F6F2355347900BD7068 = {
 			isa = PBXGroup;
 			children = (
+				F3C256AE235BCFB700136A28 /* Packages */,
 				F3562F7A2355347900BD7068 /* Kuchi */,
 				F3562F792355347900BD7068 /* Products */,
+				F3C256B0235BCFDD00136A28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +96,7 @@
 		F3562F7A2355347900BD7068 /* Kuchi */ = {
 			isa = PBXGroup;
 			children = (
+				F3A34A87235BDDC700F7C256 /* Data */,
 				F3562F892355347A00BD7068 /* Info.plist */,
 				F3562F7B2355347900BD7068 /* AppDelegate.swift */,
 				F3562F7D2355347900BD7068 /* SceneDelegate.swift */,
@@ -83,6 +118,8 @@
 		F3562F8F2355357200BD7068 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3A34A80235BD82200F7C256 /* Profile */,
+				F3A34A7F235BD81A00F7C256 /* Practice */,
 				F39F9033235B0DD0000188A5 /* Home */,
 				F380E2FE23582B850048B6F3 /* EntryView.swift */,
 				F3562F862355347A00BD7068 /* LaunchScreen.storyboard */,
@@ -96,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F3562F812355347A00BD7068 /* Assets.xcassets */,
+				F367BEBD235F21EF00FDEB0C /* jp.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -120,8 +158,65 @@
 			isa = PBXGroup;
 			children = (
 				F39F9034235B0DE5000188A5 /* HomeView.swift */,
+				F3A34A85235BD86700F7C256 /* ProgressView.swift */,
+				F3A34AA2235DAB4C00F7C256 /* CongratulationsView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F3A34A7F235BD81A00F7C256 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				F3A34A9C235D7A9600F7C256 /* ChallengeViewModel.swift */,
+				F3A34AA0235D82E400F7C256 /* ChallengeView.swift */,
+				F3A34A9E235D7AAE00F7C256 /* PracticeContainerView.swift */,
+				F3A34AA4235DB15F00F7C256 /* ChoicesView.swift */,
+				F367BEBF235F233C00FDEB0C /* QuestionView.swift */,
+				F367BEC1235F234D00FDEB0C /* ScoreView.swift */,
+				F367BEB8235F045200FDEB0C /* DeckBuilder.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		F3A34A80235BD82200F7C256 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F3A34A81235BD83A00F7C256 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F3A34A87235BDDC700F7C256 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3A34A88235BDDCB00F7C256 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3A34A88235BDDCB00F7C256 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3A34A89235BDDD600F7C256 /* User+Profile.swift */,
+				F3A34A8B235BDE1900F7C256 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3C256AE235BCFB700136A28 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F32963A4235BD2EF00F70A4D /* LanguageLearning */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		F3C256B0235BCFDD00136A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F329403B235BD25500F70A4D /* LanguageLearning */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +235,10 @@
 			dependencies = (
 			);
 			name = Kuchi;
+			packageProductDependencies = (
+				F329403C235BD27300F70A4D /* LanguageLearning */,
+				F367BEBB235F06E900FDEB0C /* CypherPoetCore */,
+			);
 			productName = Kuchi;
 			productReference = F3562F782355347900BD7068 /* Kuchi.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +267,9 @@
 				Base,
 			);
 			mainGroup = F3562F6F2355347900BD7068;
+			packageReferences = (
+				F367BEBA235F06E900FDEB0C /* XCRemoteSwiftPackageReference "CypherPoetCore" */,
+			);
 			productRefGroup = F3562F792355347900BD7068 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3562F882355347A00BD7068 /* LaunchScreen.storyboard in Resources */,
+				F367BEBE235F21EF00FDEB0C /* jp.json in Resources */,
 				F3562F852355347A00BD7068 /* Preview Assets.xcassets in Resources */,
 				F3562F822355347A00BD7068 /* Assets.xcassets in Resources */,
 			);
@@ -196,11 +299,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3562F7C2355347900BD7068 /* AppDelegate.swift in Sources */,
+				F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */,
+				F3A34A8A235BDDD600F7C256 /* User+Profile.swift in Sources */,
 				F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */,
+				F3A34AA5235DB15F00F7C256 /* ChoicesView.swift in Sources */,
 				F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */,
 				F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */,
 				F3562F7E2355347900BD7068 /* SceneDelegate.swift in Sources */,
+				F3A34A9F235D7AAE00F7C256 /* PracticeContainerView.swift in Sources */,
+				F367BEC0235F233C00FDEB0C /* QuestionView.swift in Sources */,
+				F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */,
+				F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */,
+				F367BEB9235F045200FDEB0C /* DeckBuilder.swift in Sources */,
+				F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */,
 				F380E2FD235823110048B6F3 /* RegistrationView.swift in Sources */,
+				F3A34A86235BD86700F7C256 /* ProgressView.swift in Sources */,
+				F3A34AA3235DAB4C00F7C256 /* CongratulationsView.swift in Sources */,
+				F3A34A8C235BDE1900F7C256 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +510,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F367BEBA235F06E900FDEB0C /* XCRemoteSwiftPackageReference "CypherPoetCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CypherPoet/CypherPoetCore.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F329403C235BD27300F70A4D /* LanguageLearning */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LanguageLearning;
+		};
+		F367BEBB235F06E900FDEB0C /* CypherPoetCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F367BEBA235F06E900FDEB0C /* XCRemoteSwiftPackageReference "CypherPoetCore" */;
+			productName = CypherPoetCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3562F702355347900BD7068 /* Project object */;
 }

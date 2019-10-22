@@ -10,14 +10,9 @@ import SwiftUI
 
 
 struct WelcomeView: View {
-    private let userName: String
+    @EnvironmentObject var user: User
     
     @State var isShowingHomeView = false
-    
-    
-    init(userName: String) {
-        self.userName = userName
-    }
 }
  
     
@@ -50,10 +45,15 @@ extension WelcomeView {
                         .opacity(0.08)
                 )
             
-            VStack {
+            VStack(spacing: 50) {
+                
+                Text("Greetings, \(user.profile.name)!")
+                    .font(.system(size: 32))
+                    .fontWeight(.bold)
+                
                 VStack(spacing: 4) {
                     Text("Welcome to")
-                        .font(.system(size: 55))
+                        .font(.system(size: 56))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                     
@@ -70,19 +70,17 @@ extension WelcomeView {
                             .fontWeight(.bold)
                             .multilineTextAlignment(.trailing)
                     }
-                    
-                    Button(action: {
-                        self.isShowingHomeView = true
-                    }) {
-                        Image(systemName: "play")
-                        Text("Get Started")
-                    }
-                    .offset(x: 0, y: 42)
                 }
                 .lineLimit(2)
                 .fixedSize(horizontal: false, vertical: true)
                 
                 
+                Button(action: {
+                    self.isShowingHomeView = true
+                }) {
+                    Image(systemName: "play")
+                    Text("Get Started")
+                }
             }
             .foregroundColor(.pink)
         }
@@ -91,7 +89,16 @@ extension WelcomeView {
     
 
 struct WelcomeView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        WelcomeView(userName: "CypherPoet")
+        Group {
+            WelcomeView()
+                .environmentObject(sampleUser)
+            
+            WelcomeView()
+                .environmentObject(sampleUser)
+                .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
+        }
     }
+    
 }

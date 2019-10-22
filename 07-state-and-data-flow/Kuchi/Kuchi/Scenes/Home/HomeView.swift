@@ -7,10 +7,14 @@
 //
 
 import SwiftUI
+import Assessing
 
 
 struct HomeView: View {
+    /// Will ensure the view redraws if the language is changed within system settings.
+    @Environment(\.locale) var locale: Locale
     
+    @State private var selectedTab = 0
 }
 
 
@@ -18,7 +22,29 @@ struct HomeView: View {
 extension HomeView {
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $selectedTab) {
+            PracticeContainerView()
+                .tabItem {
+                    Image(systemName: "rectangle.dock")
+                    Text("Challenge")
+                }
+                .tag(0)
+            
+            ProgressView()
+                .tabItem {
+                    Image(systemName: "chart.bar")
+                    Text("Progress")
+                }
+                .tag(1)
+            
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+                .tag(2)
+        }
+        .accentColor(.pink)
     }
 }
 

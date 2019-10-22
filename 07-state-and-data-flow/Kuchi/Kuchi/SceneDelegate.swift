@@ -19,15 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let entryView = EntryView(userName: "CypherPoet", isRegistered: false)
-
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+            let user = User(name: "CypherPoet")
+            
+            let entryView = EntryView()
+                .environmentObject(user)
+            
             let window = UIWindow(windowScene: windowScene)
-            
+
             window.rootViewController = UIHostingController(rootView: entryView)
-            
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -60,7 +61,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 

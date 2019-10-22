@@ -10,25 +10,15 @@ import SwiftUI
 
 
 struct EntryView: View {
-    private let userName: String
-    private let isRegistered: Bool
-    
-    
-    init(
-        userName: String,
-        isRegistered: Bool
-    ) {
-        self.userName = userName
-        self.isRegistered = isRegistered
-    }
+    @EnvironmentObject var user: User
 }
 
 
 extension EntryView {
     var body: some View {
         Group {
-            if isRegistered {
-                WelcomeView(userName: userName)
+            if user.isRegistered {
+                WelcomeView()
             } else {
                 RegistrationView()
             }
@@ -39,6 +29,7 @@ extension EntryView {
 
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
-        EntryView(userName: "CypherPoet", isRegistered: true)
+        EntryView()
+            .environmentObject(sampleUser)
     }
 }
