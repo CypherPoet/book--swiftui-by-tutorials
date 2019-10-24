@@ -28,8 +28,11 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 
 - [Chapter 6: Intro to Controls: Text & Image](./06-intro-to-controls-text-and-image)
-    -  
-    
+
+- [Chapter 7: State & Data Flow](./07-state-and-data-flow)
+
+- [Chapter 8: Controls & User Input](./08-controls-and-user-input)
+
 
 
 

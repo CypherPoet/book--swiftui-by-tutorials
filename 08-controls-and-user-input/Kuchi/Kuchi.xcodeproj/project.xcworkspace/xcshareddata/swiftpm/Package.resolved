@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CypherPoetCore",
+        "repositoryURL": "https://github.com/CypherPoet/CypherPoetCore.git",
+        "state": {
+          "branch": null,
+          "revision": "1747e86c937c1950cc0907a49587098fcda00b45",
+          "version": "0.0.17"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
