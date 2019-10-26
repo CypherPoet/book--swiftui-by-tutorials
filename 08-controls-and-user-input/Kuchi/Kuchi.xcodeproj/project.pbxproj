@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F300416223626F24005F5FE6 /* CypherPoetSwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F300416123626F24005F5FE6 /* CypherPoetSwiftUIKit */; };
+		F3004166236277E8005F5FE6 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3004165236277E8005F5FE6 /* WelcomeBackgroundImage.swift */; };
+		F300416823627991005F5FE6 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300416723627991005F5FE6 /* LogoImage.swift */; };
+		F300416A23627A69005F5FE6 /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300416923627A69005F5FE6 /* WelcomeMessageView.swift */; };
+		F300417423635609005F5FE6 /* CustomRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300417323635609005F5FE6 /* CustomRoundedTextField.swift */; };
+		F30041772363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30041762363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift */; };
+		F300417923635806005F5FE6 /* Text+TextStyleWithViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F300417823635806005F5FE6 /* Text+TextStyleWithViewModifier.swift */; };
 		F329403D235BD27300F70A4D /* LanguageLearning in Frameworks */ = {isa = PBXBuildFile; productRef = F329403C235BD27300F70A4D /* LanguageLearning */; };
 		F3562F7C2355347900BD7068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3562F7B2355347900BD7068 /* AppDelegate.swift */; };
 		F3562F7E2355347900BD7068 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3562F7D2355347900BD7068 /* SceneDelegate.swift */; };
@@ -19,6 +26,7 @@
 		F367BEBE235F21EF00FDEB0C /* jp.json in Resources */ = {isa = PBXBuildFile; fileRef = F367BEBD235F21EF00FDEB0C /* jp.json */; };
 		F367BEC0235F233C00FDEB0C /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BEBF235F233C00FDEB0C /* QuestionView.swift */; };
 		F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BEC1235F234D00FDEB0C /* ScoreView.swift */; };
+		F374C36F2363DC0F0050A01B /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F374C36E2363DC0F0050A01B /* KeyboardFollower.swift */; };
 		F380E2FD235823110048B6F3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380E2FC235823110048B6F3 /* RegistrationView.swift */; };
 		F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380E2FE23582B850048B6F3 /* EntryView.swift */; };
 		F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F9034235B0DE5000188A5 /* HomeView.swift */; };
@@ -34,6 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3004165236277E8005F5FE6 /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		F300416723627991005F5FE6 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		F300416923627A69005F5FE6 /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		F300417323635609005F5FE6 /* CustomRoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedTextField.swift; sourceTree = "<group>"; };
+		F30041762363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+TextFieldStyleWithViewModifier.swift"; sourceTree = "<group>"; };
+		F300417823635806005F5FE6 /* Text+TextStyleWithViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+TextStyleWithViewModifier.swift"; sourceTree = "<group>"; };
 		F329403B235BD25500F70A4D /* LanguageLearning */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LanguageLearning; path = Packages/LanguageLearning; sourceTree = "<group>"; };
 		F32963A4235BD2EF00F70A4D /* LanguageLearning */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LanguageLearning; sourceTree = "<group>"; };
 		F3562F782355347900BD7068 /* Kuchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +62,7 @@
 		F367BEBD235F21EF00FDEB0C /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = jp.json; path = Resources/jp.json; sourceTree = SOURCE_ROOT; };
 		F367BEBF235F233C00FDEB0C /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		F367BEC1235F234D00FDEB0C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		F374C36E2363DC0F0050A01B /* KeyboardFollower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 		F380E2FC235823110048B6F3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		F380E2FE23582B850048B6F3 /* EntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		F39F9034235B0DE5000188A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -68,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F367BEBC235F06E900FDEB0C /* CypherPoetCore in Frameworks */,
+				F300416223626F24005F5FE6 /* CypherPoetSwiftUIKit in Frameworks */,
 				F329403D235BD27300F70A4D /* LanguageLearning in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +91,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3004163236277C1005F5FE6 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				F3004175236356FF005F5FE6 /* Extensions */,
+				F300417123635572005F5FE6 /* View Modifiers */,
+				F300416C2363457D005F5FE6 /* Styles */,
+				F300416B23627A78005F5FE6 /* Views */,
+				F3004164236277C6005F5FE6 /* View Components */,
+				F374C36E2363DC0F0050A01B /* KeyboardFollower.swift */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		F3004164236277C6005F5FE6 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				F300416923627A69005F5FE6 /* WelcomeMessageView.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		F300416B23627A78005F5FE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F300416723627991005F5FE6 /* LogoImage.swift */,
+				F3004165236277E8005F5FE6 /* WelcomeBackgroundImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F300416C2363457D005F5FE6 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		F300417123635572005F5FE6 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				F3004172236355FB005F5FE6 /* Text Field Styles */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		F3004172236355FB005F5FE6 /* Text Field Styles */ = {
+			isa = PBXGroup;
+			children = (
+				F300417323635609005F5FE6 /* CustomRoundedTextField.swift */,
+			);
+			path = "Text Field Styles";
+			sourceTree = "<group>";
+		};
+		F3004175236356FF005F5FE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F30041762363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift */,
+				F300417823635806005F5FE6 /* Text+TextStyleWithViewModifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F3562F6F2355347900BD7068 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +174,13 @@
 		F3562F7A2355347900BD7068 /* Kuchi */ = {
 			isa = PBXGroup;
 			children = (
-				F3A34A87235BDDC700F7C256 /* Data */,
 				F3562F892355347A00BD7068 /* Info.plist */,
 				F3562F7B2355347900BD7068 /* AppDelegate.swift */,
 				F3562F7D2355347900BD7068 /* SceneDelegate.swift */,
+				F3A34A87235BDDC700F7C256 /* Data */,
 				F3562F832355347A00BD7068 /* Preview Content */,
 				F3562F902355357B00BD7068 /* Resources */,
+				F3004163236277C1005F5FE6 /* Reusables */,
 				F3562F8F2355357200BD7068 /* Scenes */,
 			);
 			path = Kuchi;
@@ -238,6 +317,7 @@
 			packageProductDependencies = (
 				F329403C235BD27300F70A4D /* LanguageLearning */,
 				F367BEBB235F06E900FDEB0C /* CypherPoetCore */,
+				F300416123626F24005F5FE6 /* CypherPoetSwiftUIKit */,
 			);
 			productName = Kuchi;
 			productReference = F3562F782355347900BD7068 /* Kuchi.app */;
@@ -269,6 +349,7 @@
 			mainGroup = F3562F6F2355347900BD7068;
 			packageReferences = (
 				F367BEBA235F06E900FDEB0C /* XCRemoteSwiftPackageReference "CypherPoetCore" */,
+				F300416023626F24005F5FE6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */,
 			);
 			productRefGroup = F3562F792355347900BD7068 /* Products */;
 			projectDirPath = "";
@@ -299,16 +380,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3562F7C2355347900BD7068 /* AppDelegate.swift in Sources */,
+				F3004166236277E8005F5FE6 /* WelcomeBackgroundImage.swift in Sources */,
+				F300416823627991005F5FE6 /* LogoImage.swift in Sources */,
 				F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */,
 				F3A34A8A235BDDD600F7C256 /* User+Profile.swift in Sources */,
 				F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */,
 				F3A34AA5235DB15F00F7C256 /* ChoicesView.swift in Sources */,
+				F300417423635609005F5FE6 /* CustomRoundedTextField.swift in Sources */,
 				F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */,
+				F374C36F2363DC0F0050A01B /* KeyboardFollower.swift in Sources */,
+				F30041772363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift in Sources */,
 				F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */,
+				F300417923635806005F5FE6 /* Text+TextStyleWithViewModifier.swift in Sources */,
 				F3562F7E2355347900BD7068 /* SceneDelegate.swift in Sources */,
 				F3A34A9F235D7AAE00F7C256 /* PracticeContainerView.swift in Sources */,
 				F367BEC0235F233C00FDEB0C /* QuestionView.swift in Sources */,
 				F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */,
+				F300416A23627A69005F5FE6 /* WelcomeMessageView.swift in Sources */,
 				F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */,
 				F367BEB9235F045200FDEB0C /* DeckBuilder.swift in Sources */,
 				F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */,
@@ -512,6 +600,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F300416023626F24005F5FE6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CypherPoet/CypherPoetSwiftUIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.10;
+			};
+		};
 		F367BEBA235F06E900FDEB0C /* XCRemoteSwiftPackageReference "CypherPoetCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CypherPoet/CypherPoetCore.git";
@@ -523,6 +619,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F300416123626F24005F5FE6 /* CypherPoetSwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F300416023626F24005F5FE6 /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */;
+			productName = CypherPoetSwiftUIKit;
+		};
 		F329403C235BD27300F70A4D /* LanguageLearning */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LanguageLearning;

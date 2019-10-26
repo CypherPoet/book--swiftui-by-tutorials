@@ -9,6 +9,15 @@
           "revision": "1747e86c937c1950cc0907a49587098fcda00b45",
           "version": "0.0.17"
         }
+      },
+      {
+        "package": "CypherPoetSwiftUIKit",
+        "repositoryURL": "https://github.com/CypherPoet/CypherPoetSwiftUIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "45b7bed096f0cc77082dc2d4c762aecfd29a0717",
+          "version": "0.0.13"
+        }
       }
     ]
   },

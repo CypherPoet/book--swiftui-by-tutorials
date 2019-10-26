@@ -12,7 +12,10 @@ import SwiftUI
 struct RegistrationView: View {
     @EnvironmentObject var user: User
     
+    // TODO: Move to RegistrationViewModel
     @State private var userNameValue = ""
+    
+    @ObservedObject var keyboardHandler = KeyboardFollower()
 }
  
 
@@ -23,7 +26,15 @@ extension RegistrationView {
             if user.isRegistered {
                 WelcomeView()
             } else {
-                registrationForm
+                VStack {
+                    WelcomeMessageView()
+                        .foregroundColor(.pink)
+                    
+                    registrationForm
+                }
+                .background(WelcomeBackgroundImage())
+                .padding(.bottom, keyboardHandler.keyboardHeight)
+                .padding()
             }
         }
     }
@@ -45,13 +56,8 @@ extension RegistrationView {
     private var registrationForm: some View {
         VStack(spacing: 20) {
             
-            Text("Welcome to Kuchi")
-                .font(.title)
-                .animation(.spring())
-            
-            Spacer()
-            
             TextField("Enter Your Name", text: $userNameValue)
+                .textFieldStyle(style: CustomRoundedTextField())
                 .multilineTextAlignment(.center)
     
     
@@ -59,12 +65,10 @@ extension RegistrationView {
                 self.registerUser()
             }) {
                 HStack {
-                    Image(systemName: "checkmark")
+                    Image(systemName: "checkmark.circle")
                     Text("Register")
                 }
             }
-            
-            Spacer()
         }
         .padding()
     }
