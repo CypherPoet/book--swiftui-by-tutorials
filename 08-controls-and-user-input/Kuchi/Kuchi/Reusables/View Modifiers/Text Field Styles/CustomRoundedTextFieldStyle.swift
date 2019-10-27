@@ -18,7 +18,7 @@ struct CustomRoundedTextFieldStyle: ViewModifier {
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(lineWidth: 2)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.accentColor)
             )
             .shadow(color: Color.gray.opacity(0.4), radius: 3, x: 1, y: 2)
     }

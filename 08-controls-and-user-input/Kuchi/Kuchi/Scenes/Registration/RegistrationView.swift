@@ -62,8 +62,11 @@ extension RegistrationView {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("Register")
+                        .font(.body)
+                        .fontWeight(.bold)
                 }
             }
+            .buttonStyle(CustomFilledButtonStyle(fillColor: .purple))
             .disabled(!viewModel.isFormValid)
         }
         .padding()
@@ -75,5 +78,6 @@ struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
             .environmentObject(sampleEmptyUserStore)
+            .accentColor(.pink)
     }
 }

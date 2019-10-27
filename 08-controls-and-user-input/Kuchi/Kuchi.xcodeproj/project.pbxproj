@@ -41,6 +41,8 @@
 		F3A5BF2B236527E70031FACF /* CypherPoetUIKit.KeyboardUtils in Frameworks */ = {isa = PBXBuildFile; productRef = F3A5BF2A236527E70031FACF /* CypherPoetUIKit.KeyboardUtils */; };
 		F3A5BF2D23652C1A0031FACF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF2C23652C1A0031FACF /* RegistrationViewModel.swift */; };
 		F3A5BF2F236539080031FACF /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF2E236539080031FACF /* UserSettings.swift */; };
+		F3A5BF32236652F00031FACF /* CustomFilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF31236652F00031FACF /* CustomFilledButtonStyle.swift */; };
+		F3A5BF34236653D90031FACF /* CustomOutlinedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF33236653D90031FACF /* CustomOutlinedButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		F3A34AA4235DB15F00F7C256 /* ChoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesView.swift; sourceTree = "<group>"; };
 		F3A5BF2C23652C1A0031FACF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F3A5BF2E236539080031FACF /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		F3A5BF31236652F00031FACF /* CustomFilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFilledButtonStyle.swift; sourceTree = "<group>"; };
+		F3A5BF33236653D90031FACF /* CustomOutlinedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOutlinedButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,10 @@
 			isa = PBXGroup;
 			children = (
 				F3004175236356FF005F5FE6 /* Extensions */,
-				F300417123635572005F5FE6 /* View Modifiers */,
 				F300416C2363457D005F5FE6 /* Styles */,
-				F300416B23627A78005F5FE6 /* Views */,
 				F3004164236277C6005F5FE6 /* View Components */,
+				F300417123635572005F5FE6 /* View Modifiers */,
+				F300416B23627A78005F5FE6 /* Views */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -127,6 +131,7 @@
 		F300416C2363457D005F5FE6 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				F3A5BF30236651B80031FACF /* Buttons */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -287,6 +292,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F3A5BF30236651B80031FACF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5BF31236652F00031FACF /* CustomFilledButtonStyle.swift */,
+				F3A5BF33236653D90031FACF /* CustomOutlinedButtonStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		F3C256AE235BCFB700136A28 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,9 +406,11 @@
 				F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */,
 				F3A34A8A235BDDD600F7C256 /* UserProfile.swift in Sources */,
 				F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */,
+				F3A5BF34236653D90031FACF /* CustomOutlinedButtonStyle.swift in Sources */,
 				F3A34AA5235DB15F00F7C256 /* ChoicesView.swift in Sources */,
 				F300417423635609005F5FE6 /* CustomRoundedTextFieldStyle.swift in Sources */,
 				F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */,
+				F3A5BF32236652F00031FACF /* CustomFilledButtonStyle.swift in Sources */,
 				F30041772363571A005F5FE6 /* TextField+TextFieldStyleWithViewModifier.swift in Sources */,
 				F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */,
 				F300417923635806005F5FE6 /* Text+TextStyleWithViewModifier.swift in Sources */,
