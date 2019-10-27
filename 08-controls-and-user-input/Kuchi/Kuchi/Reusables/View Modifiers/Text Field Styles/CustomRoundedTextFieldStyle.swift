@@ -1,5 +1,5 @@
 //
-//  CustomRoundedTextField.swift
+//  CustomRoundedTextFieldStyle.swift
 //  Kuchi
 //
 //  Created by CypherPoet on 10/25/19.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-struct CustomRoundedTextField: ViewModifier {
+struct CustomRoundedTextFieldStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         content

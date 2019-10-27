@@ -7,15 +7,13 @@
 //
 
 import SwiftUI
+import CypherPoetUIKit_KeyboardUtils
 
 
 struct RegistrationView: View {
-    @EnvironmentObject var user: User
-    
-    // TODO: Move to RegistrationViewModel
-    @State private var userNameValue = ""
-    
+    @EnvironmentObject var userStore: UserStore
     @ObservedObject var keyboardHandler = KeyboardFollower()
+    @ObservedObject var viewModel = RegistrationViewModel()
 }
  
 
@@ -23,8 +21,8 @@ extension RegistrationView {
     
     var body: some View {
         Group {
-            if user.isRegistered {
-                WelcomeView()
+            if userStore.isRegistered {
+                WelcomeView(username: userStore.profile.name!)
             } else {
                 VStack {
                     WelcomeMessageView()
@@ -44,20 +42,17 @@ extension RegistrationView {
 extension RegistrationView {
     
     private func registerUser() {
-        let userName = userNameValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if !userName.isEmpty {
-            user.profile = .init(name: userName)
-            user.isRegistered = true
-        }
+        userStore.profile.name = viewModel.username
+        userStore.persistProfile()
     }
     
     
     private var registrationForm: some View {
         VStack(spacing: 20) {
             
-            TextField("Enter Your Name", text: $userNameValue)
-                .textFieldStyle(style: CustomRoundedTextField())
+            TextField("Enter Your Name", text: $viewModel.username)
+                .textFieldStyle(style: CustomRoundedTextFieldStyle())
+                .autocapitalization(.none)
                 .multilineTextAlignment(.center)
     
     
@@ -69,6 +64,7 @@ extension RegistrationView {
                     Text("Register")
                 }
             }
+            .disabled(!viewModel.isFormValid)
         }
         .padding()
     }
@@ -78,6 +74,6 @@ extension RegistrationView {
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
         RegistrationView()
-            .environmentObject(sampleUser)
+            .environmentObject(sampleEmptyUserStore)
     }
 }

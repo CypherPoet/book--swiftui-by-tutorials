@@ -10,7 +10,7 @@ import SwiftUI
 import CypherPoetSwiftUIKit_ViewModifiers
 
 struct WelcomeView: View {
-    @EnvironmentObject var user: User
+    let username: String
     
     @State var isShowingHomeView = false
 }
@@ -33,7 +33,7 @@ extension WelcomeView {
 
     private var welcomeScreen: some View {
         VStack(spacing: 50) {
-            Text("Greetings, \(user.profile.name)!")
+            Text("Greetings, \(username)!")
                 .font(.system(size: 32))
                 .fontWeight(.bold)
             
@@ -56,11 +56,9 @@ struct WelcomeView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            WelcomeView()
-                .environmentObject(sampleUser)
+            WelcomeView(username: sampleUserStoreWithProfile.profile.name!)
             
-            WelcomeView()
-                .environmentObject(sampleUser)
+            WelcomeView(username: sampleUserStoreWithProfile.profile.name!)
                 .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
         }
     }
