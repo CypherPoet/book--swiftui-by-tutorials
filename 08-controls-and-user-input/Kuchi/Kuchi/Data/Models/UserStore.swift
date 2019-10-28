@@ -59,10 +59,19 @@ extension UserStore {
 // MARK: - Public Methods
 extension UserStore {
     
-    func persistProfile() {
+    func saveNewUser() {
         if settings.shouldPersistProfile {
             encodeUserProfile()
+        } else {
+            clearUserProfile()
         }
+        
+        persistSettings()
+    }
+    
+    
+    func persistSettings() {
+        encodeUserSettings()
     }
     
     
@@ -81,17 +90,24 @@ extension UserStore {
 
 
 // MARK: - Private Helpers
-extension UserStore {
+private extension UserStore {
     
     func encodeUserProfile() {
         let encoder = PropertyListEncoder()
         
         savedProfileData = (try? encoder.encode(profile)) ?? Data()
-//        do {
-//            savedProfileData = try? encoder.encode(profile) ?? Data()
-//        } catch {
-//            print("Error encoding order data: \(error.localizedDescription)")
-//        }
+    }
+
+    
+    func clearUserProfile() {
+        savedProfileData = Data()
+    }
+    
+    
+    func encodeUserSettings() {
+        let encoder = PropertyListEncoder()
+        
+        savedSettingsData = (try? encoder.encode(settings)) ?? Data()
     }
 }
 

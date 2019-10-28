@@ -24,11 +24,12 @@ extension RegistrationView {
             if userStore.isRegistered {
                 WelcomeView(username: userStore.profile.name!)
             } else {
-                VStack {
+                VStack(spacing: 42) {
                     WelcomeMessageView()
                         .foregroundColor(.pink)
                     
                     registrationForm
+                    registerButton
                 }
                 .background(WelcomeBackgroundImage())
                 .padding(.bottom, keyboardHandler.keyboardHeight)
@@ -43,33 +44,55 @@ extension RegistrationView {
     
     private func registerUser() {
         userStore.profile.name = viewModel.username
-        userStore.persistProfile()
+        userStore.settings.shouldPersistProfile = viewModel.shouldRememberUser
+        userStore.saveNewUser()
     }
     
     
     private var registrationForm: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 22) {
             
-            TextField("Enter Your Name", text: $viewModel.username)
-                .textFieldStyle(style: CustomRoundedTextFieldStyle())
-                .autocapitalization(.none)
-                .multilineTextAlignment(.center)
-    
-    
-            Button(action: {
-                self.registerUser()
-            }) {
+            VStack(spacing: 8) {
+                TextField("Enter Your Name", text: $viewModel.username)
+                    .textFieldStyle(style: CustomRoundedTextFieldStyle())
+                    .autocapitalization(.none)
+                    .multilineTextAlignment(.center)
+                
                 HStack {
-                    Image(systemName: "checkmark.circle")
-                    Text("Register")
-                        .font(.body)
-                        .fontWeight(.bold)
+                    Spacer()
+                    Text("\(viewModel.usernameLength)")
+                        .font(.caption)
+                        .padding(.trailing, 2)
+                        .foregroundColor(viewModel.isUsernameValid ? .green : .red)
                 }
             }
-            .buttonStyle(CustomFilledButtonStyle(fillColor: .purple))
-            .disabled(!viewModel.isFormValid)
+            
+            Toggle(isOn: $viewModel.shouldRememberUser) {
+                HStack {
+                    Spacer()
+                    Text("Remember Me")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
         .padding()
+    }
+    
+    
+    private var registerButton: some View {
+        Button(action: {
+            self.registerUser()
+        }) {
+            HStack {
+                Image(systemName: "checkmark.circle")
+                Text("Register")
+                    .font(.body)
+                    .fontWeight(.bold)
+            }
+        }
+        .buttonStyle(CustomFilledButtonStyle(fillColor: .purple))
+        .disabled(!viewModel.isFormValid)
     }
 }
 
