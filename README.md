@@ -33,6 +33,8 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 8: Controls & User Input](./08-controls-and-user-input)
 
+- [Chapter 9: Stacks & Containers](./09-stacks-and-containers)
+
 
 
 
