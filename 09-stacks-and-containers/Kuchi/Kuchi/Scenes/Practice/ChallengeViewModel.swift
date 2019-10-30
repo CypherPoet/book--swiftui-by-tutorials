@@ -90,6 +90,12 @@ extension ChallengeViewModel {
 // MARK: - Public Methods
 extension ChallengeViewModel {
     
+    func startNewChallenge() {
+        challengeState = .inProgress(currentIndex: 0)
+        buildCards()
+    }
+    
+    
     func isSubmissionCorrect(at index: Int) -> Bool {
         assessments[index].isAnswerCorrect(submissions[index])
     }
@@ -104,8 +110,6 @@ extension ChallengeViewModel {
         cards = DeckBuilder.default.build()
         assessments = DeckBuilder.default.assess(upTo: 500)
         submissions = [String](repeating: "", count: assessments.count)
-        
-        challengeState = .inProgress(currentIndex: 0)
     }
     
     

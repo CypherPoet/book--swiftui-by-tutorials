@@ -32,7 +32,6 @@
 		F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A81235BD83A00F7C256 /* ProfileView.swift */; };
 		F3A34A86235BD86700F7C256 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A85235BD86700F7C256 /* ProgressView.swift */; };
 		F3A34A8A235BDDD600F7C256 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A89235BDDD600F7C256 /* UserProfile.swift */; };
-		F3A34A8C235BDE1900F7C256 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A8B235BDE1900F7C256 /* UserStore.swift */; };
 		F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A9C235D7A9600F7C256 /* ChallengeViewModel.swift */; };
 		F3A34A9F235D7AAE00F7C256 /* PracticeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A9E235D7AAE00F7C256 /* PracticeContainerView.swift */; };
 		F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34AA0235D82E400F7C256 /* ChallengeView.swift */; };
@@ -42,8 +41,17 @@
 		F3A5BF2D23652C1A0031FACF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF2C23652C1A0031FACF /* RegistrationViewModel.swift */; };
 		F3A5BF32236652F00031FACF /* CustomFilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF31236652F00031FACF /* CustomFilledButtonStyle.swift */; };
 		F3A5BF34236653D90031FACF /* CustomOutlinedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5BF33236653D90031FACF /* CustomOutlinedButtonStyle.swift */; };
-		F3E011C62368190A0086C207 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011C52368190A0086C207 /* SettingsStore.swift */; };
 		F3E011C923681EBA0086C207 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011C823681EBA0086C207 /* UserDefaultsKey.swift */; };
+		F3E011CF2368F21A0086C207 /* UserBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011CE2368F21A0086C207 /* UserBanner.swift */; };
+		F3E011DA236928470086C207 /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011D8236928470086C207 /* UserState.swift */; };
+		F3E011DB236928470086C207 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011D9236928470086C207 /* SettingsState.swift */; };
+		F3E011DD236929030086C207 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011DC236929030086C207 /* AppStore.swift */; };
+		F3E011DF236929330086C207 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011DE236929330086C207 /* User.swift */; };
+		F3E011E1236959E40086C207 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011E0236959E40086C207 /* Samples.swift */; };
+		F3E011E323695E980086C207 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011E223695E980086C207 /* AppState.swift */; };
+		F3E011E52369624F0086C207 /* UserProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011E42369624F0086C207 /* UserProfileState.swift */; };
+		F3E011E7236978190086C207 /* SideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011E6236978190086C207 /* SideEffect.swift */; };
+		F3E011E92369784C0086C207 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E011E82369784C0086C207 /* Reducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +81,6 @@
 		F3A34A81235BD83A00F7C256 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F3A34A85235BD86700F7C256 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		F3A34A89235BDDD600F7C256 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		F3A34A8B235BDE1900F7C256 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = ../Models/UserStore.swift; sourceTree = "<group>"; };
 		F3A34A9C235D7A9600F7C256 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		F3A34A9E235D7AAE00F7C256 /* PracticeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeContainerView.swift; sourceTree = "<group>"; };
 		F3A34AA0235D82E400F7C256 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
@@ -82,8 +89,17 @@
 		F3A5BF2C23652C1A0031FACF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		F3A5BF31236652F00031FACF /* CustomFilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFilledButtonStyle.swift; sourceTree = "<group>"; };
 		F3A5BF33236653D90031FACF /* CustomOutlinedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOutlinedButtonStyle.swift; sourceTree = "<group>"; };
-		F3E011C52368190A0086C207 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		F3E011C823681EBA0086C207 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		F3E011CE2368F21A0086C207 /* UserBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBanner.swift; sourceTree = "<group>"; };
+		F3E011D8236928470086C207 /* UserState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
+		F3E011D9236928470086C207 /* SettingsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
+		F3E011DC236929030086C207 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		F3E011DE236929330086C207 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F3E011E0236959E40086C207 /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		F3E011E223695E980086C207 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F3E011E42369624F0086C207 /* UserProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileState.swift; sourceTree = "<group>"; };
+		F3E011E6236978190086C207 /* SideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideEffect.swift; sourceTree = "<group>"; };
+		F3E011E82369784C0086C207 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +143,7 @@
 			children = (
 				F300416723627991005F5FE6 /* LogoImage.swift */,
 				F3004165236277E8005F5FE6 /* WelcomeBackgroundImage.swift */,
+				F3E011CE2368F21A0086C207 /* UserBanner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F3562F842355347A00BD7068 /* Preview Assets.xcassets */,
+				F3E011E0236959E40086C207 /* Samples.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -208,11 +226,11 @@
 		F3562F8F2355357200BD7068 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F3A34A80235BD82200F7C256 /* Profile */,
-				F3A34A7F235BD81A00F7C256 /* Practice */,
-				F39F9033235B0DD0000188A5 /* Home */,
 				F380E2FE23582B850048B6F3 /* EntryView.swift */,
+				F39F9033235B0DD0000188A5 /* Home */,
 				F3562F862355347A00BD7068 /* LaunchScreen.storyboard */,
+				F3A34A7F235BD81A00F7C256 /* Practice */,
+				F3A34A80235BD82200F7C256 /* Profile */,
 				F380E2F9235820130048B6F3 /* Registration */,
 				F3562F912355358900BD7068 /* Welcome */,
 			);
@@ -280,8 +298,11 @@
 		F3A34A87235BDDC700F7C256 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F3E011C3236818FB0086C207 /* Stores */,
+				F3E011DC236929030086C207 /* AppStore.swift */,
+				F3E011E82369784C0086C207 /* Reducer.swift */,
+				F3E011E6236978190086C207 /* SideEffect.swift */,
 				F3A34A88235BDDCB00F7C256 /* Models */,
+				F3E011D52368FF5D0086C207 /* State */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -290,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				F3A34A89235BDDD600F7C256 /* UserProfile.swift */,
+				F3E011DE236929330086C207 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,21 +341,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3E011C3236818FB0086C207 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-				F3E011C52368190A0086C207 /* SettingsStore.swift */,
-				F3A34A8B235BDE1900F7C256 /* UserStore.swift */,
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
 		F3E011C723681EAB0086C207 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				F3E011C823681EBA0086C207 /* UserDefaultsKey.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F3E011D52368FF5D0086C207 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				F3E011E223695E980086C207 /* AppState.swift */,
+				F3E011D9236928470086C207 /* SettingsState.swift */,
+				F3E011D8236928470086C207 /* UserState.swift */,
+				F3E011E42369624F0086C207 /* UserProfileState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,10 +443,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E011DB236928470086C207 /* SettingsState.swift in Sources */,
 				F3562F7C2355347900BD7068 /* AppDelegate.swift in Sources */,
+				F3E011DA236928470086C207 /* UserState.swift in Sources */,
+				F3E011E1236959E40086C207 /* Samples.swift in Sources */,
 				F3004166236277E8005F5FE6 /* WelcomeBackgroundImage.swift in Sources */,
 				F300416823627991005F5FE6 /* LogoImage.swift in Sources */,
 				F3A34A9D235D7A9600F7C256 /* ChallengeViewModel.swift in Sources */,
+				F3E011E92369784C0086C207 /* Reducer.swift in Sources */,
+				F3E011CF2368F21A0086C207 /* UserBanner.swift in Sources */,
 				F3A34A8A235BDDD600F7C256 /* UserProfile.swift in Sources */,
 				F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */,
 				F3A5BF34236653D90031FACF /* CustomOutlinedButtonStyle.swift in Sources */,
@@ -434,11 +463,14 @@
 				F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */,
 				F300417923635806005F5FE6 /* Text+TextStyleWithViewModifier.swift in Sources */,
 				F3562F7E2355347900BD7068 /* SceneDelegate.swift in Sources */,
+				F3E011E52369624F0086C207 /* UserProfileState.swift in Sources */,
 				F3A34A9F235D7AAE00F7C256 /* PracticeContainerView.swift in Sources */,
+				F3E011E7236978190086C207 /* SideEffect.swift in Sources */,
 				F367BEC0235F233C00FDEB0C /* QuestionView.swift in Sources */,
 				F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */,
-				F3E011C62368190A0086C207 /* SettingsStore.swift in Sources */,
 				F300416A23627A69005F5FE6 /* WelcomeMessageView.swift in Sources */,
+				F3E011E323695E980086C207 /* AppState.swift in Sources */,
+				F3E011DD236929030086C207 /* AppStore.swift in Sources */,
 				F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */,
 				F367BEB9235F045200FDEB0C /* DeckBuilder.swift in Sources */,
 				F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */,
@@ -447,7 +479,7 @@
 				F380E2FD235823110048B6F3 /* RegistrationView.swift in Sources */,
 				F3A34A86235BD86700F7C256 /* ProgressView.swift in Sources */,
 				F3A34AA3235DAB4C00F7C256 /* CongratulationsView.swift in Sources */,
-				F3A34A8C235BDE1900F7C256 /* UserStore.swift in Sources */,
+				F3E011DF236929330086C207 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

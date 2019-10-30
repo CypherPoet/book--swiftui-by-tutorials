@@ -11,8 +11,7 @@ import CypherPoetUIKit_KeyboardUtils
 
 
 struct RegistrationView: View {
-    @EnvironmentObject var userStore: UserStore
-    @EnvironmentObject var settingsStore: SettingsStore
+    @EnvironmentObject private var store: Store<AppState, AppAction>
     
     @ObservedObject var keyboardHandler = KeyboardFollower()
     @ObservedObject var viewModel = RegistrationViewModel()
@@ -20,11 +19,16 @@ struct RegistrationView: View {
  
 
 extension RegistrationView {
+    var isRegistered: Bool { store.state.userState.isRegistered }
+}
+
+
+extension RegistrationView {
     
     var body: some View {
         Group {
-            if userStore.isRegistered {
-                WelcomeView(username: userStore.profile.name!)
+            if isRegistered {
+                WelcomeView()
             } else {
                 VStack(spacing: 42) {
                     WelcomeMessageView()
@@ -45,9 +49,13 @@ extension RegistrationView {
 extension RegistrationView {
     
     private func registerUser() {
-        userStore.profile.name = viewModel.username
-        settingsStore.shouldPersistProfile = viewModel.shouldRememberUser
-        userStore.saveNewUser()
+        guard let draftUserProfile = viewModel.draftUserProfile else { preconditionFailure() }
+        
+        store.send(.userAction(.register))
+        
+        if viewModel.shouldRememberUser {
+            store.send(.userProfileAction(.persist(draftUserProfile)))
+        }
     }
     
     
@@ -100,10 +108,10 @@ extension RegistrationView {
 
 
 struct RegistrationView_Previews: PreviewProvider {
+   
     static var previews: some View {
         RegistrationView()
-            .environmentObject(sampleEmptyUserStore)
-            .environmentObject(sampleSettingsStore)
+            .environmentObject(SampleStore.default)
             .accentColor(.pink)
     }
 }

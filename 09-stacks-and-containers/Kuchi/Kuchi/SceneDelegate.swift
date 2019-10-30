@@ -21,12 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-            let userStore = UserStore()
-            userStore.loadSavedData()
+            let appState = AppState()
+            let store = Store(initialState: appState, appReducer: appReducer)
+            
+            
+            if appState.settingsState.shouldPersistProfile {
+                store.send(.userProfileAction(.load))
+                store.send(.userAction(.register))
+            }
+            
             
             let entryView = EntryView()
-                .environmentObject(userStore)
-                .environmentObject(SettingsStore())
+                .environmentObject(store)
                 .accentColor(.pink)
             
             let window = UIWindow(windowScene: windowScene)

@@ -10,15 +10,19 @@ import SwiftUI
 
 
 struct EntryView: View {
-    @EnvironmentObject var userStore: UserStore
+    @EnvironmentObject private var store: Store<AppState, AppAction>
 }
 
 
 extension EntryView {
+    var isRegistered: Bool { store.state.userState.isRegistered }
+}
+
+extension EntryView {
     var body: some View {
         Group {
-            if userStore.isRegistered {
-                WelcomeView(username: userStore.profile.name!)
+            if isRegistered {
+                WelcomeView()
             } else {
                 RegistrationView()
             }
@@ -30,6 +34,6 @@ extension EntryView {
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
         EntryView()
-            .environmentObject(sampleUserStoreWithProfile)
+            .environmentObject(SampleStore.default)
     }
 }

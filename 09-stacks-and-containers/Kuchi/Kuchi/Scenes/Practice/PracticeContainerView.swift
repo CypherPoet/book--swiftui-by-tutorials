@@ -22,19 +22,16 @@ struct PracticeContainerView: View {
 extension PracticeContainerView {
 
     var body: some View {
-
-        Group {
-            if isPracticeComplete {
-                CongratulationsView()
-            } else {
-                ChallengeView(
-                    viewModel: viewModel,
-                    onComplete: onChallengeCompleted
-                )
-                .onAppear {
-                    self.viewModel.buildCards()
-                }
-            }
+        ChallengeView(
+            viewModel: viewModel,
+            onComplete: onChallengeCompleted
+        )
+        .onAppear(perform: viewModel.startNewChallenge)
+        .sheet(
+            isPresented: $isPracticeComplete,
+            onDismiss: viewModel.startNewChallenge
+        ) {
+            CongratulationsView()
         }
     }
 }

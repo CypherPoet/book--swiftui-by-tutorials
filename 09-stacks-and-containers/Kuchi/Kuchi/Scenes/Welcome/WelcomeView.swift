@@ -1,4 +1,4 @@
-    //
+//
 //  WelcomeView.swift
 //  Kuchi
 //
@@ -9,12 +9,19 @@
 import SwiftUI
 import CypherPoetSwiftUIKit_ViewModifiers
 
+    
 struct WelcomeView: View {
-    let username: String
+    @EnvironmentObject private var store: Store<AppState, AppAction>
     
     @State var isShowingHomeView = false
 }
  
+    
+extension WelcomeView {
+    var username: String { store.state.userProfileState.profile.name ?? "" }
+}
+
+    
     
 extension WelcomeView {
     var body: some View {
@@ -63,9 +70,9 @@ struct WelcomeView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            WelcomeView(username: sampleUserStoreWithProfile.profile.name!)
+            WelcomeView()
             
-            WelcomeView(username: sampleUserStoreWithProfile.profile.name!)
+            WelcomeView()
                 .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
         }
     }

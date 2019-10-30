@@ -47,6 +47,7 @@ extension ChallengeView {
                 onSelect: check(selectedAnswer:)
             )
             .frame(height: 300)
+            .clipped()
             .padding()
         }
     }
@@ -70,7 +71,7 @@ struct ChallengeView_Previews: PreviewProvider {
     
     static var previews: some View {
         let viewModel = ChallengeViewModel()
-        viewModel.buildCards()
+        viewModel.startNewChallenge()
         
         return ChallengeView(
             viewModel: viewModel,

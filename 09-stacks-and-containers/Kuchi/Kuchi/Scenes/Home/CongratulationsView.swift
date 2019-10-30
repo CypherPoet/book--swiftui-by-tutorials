@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct CongratulationsView: View {
+    @Environment(\.presentationMode) var presentationMode
 }
 
 
@@ -17,9 +18,26 @@ struct CongratulationsView: View {
 extension CongratulationsView {
 
     var body: some View {
-        VStack {
-            Text("🎉 Congratulations!")
-                .font(.largeTitle)
+        
+        VStack(spacing: 42) {
+            
+            VStack(spacing: 10) {
+                Text("🎉 Congratulations!")
+                    .font(.largeTitle)
+                
+                UserBanner()
+                
+                Text("You're awesome!")
+                    .font(.headline)
+                    .foregroundColor(.gray)
+            }
+            
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "gobackward")
+                Text("Play Again")
+            }
         }
     }
 }

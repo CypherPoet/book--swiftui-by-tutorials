@@ -22,6 +22,8 @@ final class RegistrationViewModel: ObservableObject {
     
     @Published var isFormValid = false
     
+    @Published var draftUserProfile: UserProfile?
+    
     
     init() {
         setupSubscriptions()
@@ -51,6 +53,17 @@ extension RegistrationViewModel {
     
     var isFormValidPublisher: AnyPublisher<Bool, Never> {
         isUsernameValidPublisher
+            .eraseToAnyPublisher()
+    }
+    
+    
+    var draftUserProfilePublisher: AnyPublisher<UserProfile?, Never> {
+        isFormValidPublisher
+            .map { isValid in
+                guard isValid else { return nil }
+                
+                return UserProfile(name: self.username)
+            }
             .eraseToAnyPublisher()
     }
 }
@@ -85,6 +98,12 @@ private extension RegistrationViewModel {
         isFormValidPublisher
             .receive(on: DispatchQueue.main)
             .assign(to: \.isFormValid, on: self)
+            .store(in: &subscriptions)
+        
+        
+        draftUserProfilePublisher
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.draftUserProfile, on: self)
             .store(in: &subscriptions)
     }
 }
