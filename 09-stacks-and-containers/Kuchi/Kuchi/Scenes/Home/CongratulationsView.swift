@@ -48,5 +48,6 @@ struct CongratulationsView_Previews: PreviewProvider {
 
     static var previews: some View {
         CongratulationsView()
+            .environmentObject(SampleStore.withUserProfile)
     }
 }

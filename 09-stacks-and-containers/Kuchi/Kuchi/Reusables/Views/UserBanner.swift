@@ -11,6 +11,8 @@ import SwiftUI
 
 struct UserBanner: View {
     @EnvironmentObject private var store: Store<AppState, AppAction>
+    
+    let avatarRadius: CGFloat = 64.0
 }
 
 
@@ -32,6 +34,7 @@ extension UserBanner {
             userAvatar
             userName
         }
+        .frame(height: 180)
     }
 }
 
@@ -40,21 +43,43 @@ extension UserBanner {
 extension UserBanner {
     
     private var bannerBackground: some View {
-        EmptyView()
+        VStack(spacing: 0) {
+            Rectangle()
+                .frame(height: 90)
+                .foregroundColor(Color.red.opacity(0.3))
+                .saturation(1.1)
+            Rectangle()
+                .frame(height: 90)
+                .foregroundColor(Color.red.opacity(0.6))
+                .saturation(0.9)
+        }
     }
     
     
     
     private var userAvatar: some View {
-        EmptyView()
+        Image(systemName: "person.fill")
+            .resizable()
+            .padding()
+            .frame(width: avatarRadius * 2, height: avatarRadius * 2)
+            .background(Color.white.opacity(0.5))
+            .cornerRadius(avatarRadius, antialiased: true)
+            .shadow(radius: 4)
     }
     
     
     
     private var userName: some View {
-        Text("\(username)")
-            .font(.title)
-            .fontWeight(.bold)
+        VStack {
+            Spacer()
+            
+            Text("\(username)")
+                .font(.title)
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+                .shadow(radius: 7)
+        }
+        .padding()
     }
 }
 
