@@ -14,3 +14,10 @@ struct AppState {
     var userProfileState = UserProfileState()
     var settingsState = SettingsState()
 }
+
+
+
+enum AppAction {
+    case userAction(_ action: UserAction)
+    case userProfileAction(_ action: UserProfileAction)
+}

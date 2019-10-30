@@ -23,13 +23,6 @@ import Combine
 
 
 
-enum AppAction {
-    case userAction(_ action: UserAction)
-    case userProfileAction(_ action: UserProfileAction)
-}
-
-
-
 final class Store<AppState, AppAction>: ObservableObject {
     @Published private(set) var state: AppState
     
@@ -62,7 +55,7 @@ final class Store<AppState, AppAction>: ObservableObject {
 }
 
 
-
+// MARK: - Reducer
 let appReducer: Reducer<AppState, AppAction> = Reducer(reduce: { appState, action in
     switch action {
     case let .userAction(action):

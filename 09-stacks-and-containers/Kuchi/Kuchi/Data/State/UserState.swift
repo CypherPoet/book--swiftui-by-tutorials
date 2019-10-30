@@ -9,7 +9,6 @@
 import Foundation
 import Combine
 import SwiftUI
-import CypherPoetCore_PropertyWrappers
 
 
 
@@ -17,13 +16,6 @@ struct UserState {
     @EnvironmentObject private var store: Store<AppState, AppAction>
 
     var user = User()
-    
-//
-//    init() {
-//        if let profile = store.state.userProfileState.profile {
-//            user.profile = profile
-//        }
-//    }
 }
 
 
@@ -55,8 +47,7 @@ enum UserAction {
 
 
 
-
-
+// MARK: - Reducer
 let userReducer: Reducer<UserState, UserAction> = Reducer(reduce: { userState, action in
     switch action {
     case let .save(user):
