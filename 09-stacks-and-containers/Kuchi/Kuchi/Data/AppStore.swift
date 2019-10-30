@@ -53,14 +53,3 @@ final class Store<AppState, AppAction>: ObservableObject {
             .store(in: &cancellables)
     }
 }
-
-
-// MARK: - Reducer
-let appReducer: Reducer<AppState, AppAction> = Reducer(reduce: { appState, action in
-    switch action {
-    case let .userAction(action):
-        userReducer.reduce(&appState.userState, action)
-    case let .userProfileAction(action):
-        userProfileReducer.reduce(&appState.userProfileState, action)
-    }
-})

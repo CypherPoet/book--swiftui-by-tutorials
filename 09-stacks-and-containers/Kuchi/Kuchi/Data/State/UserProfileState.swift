@@ -45,7 +45,7 @@ enum UserProfileAction {
 }
 
 
-
+// MARK: - Reducer
 let userProfileReducer: Reducer<UserProfileState, UserProfileAction> = Reducer(
     reduce: { userProfileState, action in
         switch action {
