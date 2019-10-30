@@ -19,7 +19,8 @@ extension CongratulationsView {
 
     var body: some View {
         
-        VStack(spacing: 42) {
+        VStack(spacing: 0) {
+            Spacer()
             
             VStack(spacing: 10) {
                 Text("🎉 Congratulations!")
@@ -32,6 +33,9 @@ extension CongratulationsView {
                     .foregroundColor(.gray)
             }
             
+            Spacer()
+            
+            
             Button(action: {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
@@ -39,6 +43,7 @@ extension CongratulationsView {
                 Text("Play Again")
             }
         }
+        .padding(.vertical, 42)
     }
 }
 
