@@ -13,14 +13,18 @@ import Foundation
 
 
 enum SampleAppState {
-    static let unRegisteredUser = AppState()
+    static let empty = AppState()
+    
+    static let withUserProfile = AppState(
+        userProfileState: UserProfileState(
+            profile: UserProfile(name: "CypherPoet")
+        )
+    )
 }
     
 
 enum SampleUserState {
     static let `default` = UserState()
-//    static let unregistered = UserState(user: SampleUser.unregistered)
-//    static let registered = UserState(user: SampleUser.registered)
 }
 
 
@@ -31,16 +35,19 @@ enum SampleSettingsState {
 
 enum SampleUser {
     static let `default` = User()
-//    static let registered = User(name: "CypherPoet")
 }
 
 
 enum SampleStore {
     
-    static let `default`: Store<AppState, AppAction> = {
-        Store(initialState: SampleAppState.unRegisteredUser, appReducer: appReducer)
+    static let empty: Store<AppState, AppAction> = {
+        Store(initialState: SampleAppState.empty, appReducer: appReducer)
     }()
     
+    
+    static let withUserProfile: Store<AppState, AppAction> = {
+        Store(initialState: SampleAppState.withUserProfile, appReducer: appReducer)
+    }()
 }
 
 #endif

@@ -14,6 +14,15 @@ struct UserBanner: View {
 }
 
 
+
+// MARK: - Computeds
+extension UserBanner {
+    var username: String {
+        store.state.userProfileState.profile.name ?? ""
+    }
+}
+
+
 // MARK: - Body
 extension UserBanner {
 
@@ -43,7 +52,9 @@ extension UserBanner {
     
     
     private var userName: some View {
-        EmptyView()
+        Text("\(username)")
+            .font(.title)
+            .fontWeight(.bold)
     }
 }
 
@@ -55,5 +66,6 @@ struct UserBanner_Previews: PreviewProvider {
 
     static var previews: some View {
         UserBanner()
+            .environmentObject(SampleStore.withUserProfile)
     }
 }

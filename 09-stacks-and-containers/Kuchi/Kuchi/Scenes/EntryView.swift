@@ -34,6 +34,6 @@ extension EntryView {
 struct EntryView_Previews: PreviewProvider {
     static var previews: some View {
         EntryView()
-            .environmentObject(SampleStore.default)
+            .environmentObject(SampleStore.empty)
     }
 }

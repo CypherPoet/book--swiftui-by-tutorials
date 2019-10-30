@@ -111,7 +111,7 @@ struct RegistrationView_Previews: PreviewProvider {
    
     static var previews: some View {
         RegistrationView()
-            .environmentObject(SampleStore.default)
+            .environmentObject(SampleStore.empty)
             .accentColor(.pink)
     }
 }
