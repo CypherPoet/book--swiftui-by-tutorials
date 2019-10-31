@@ -44,7 +44,6 @@ extension HomeView {
                 }
                 .tag(2)
         }
-        .accentColor(.pink)
     }
 }
 

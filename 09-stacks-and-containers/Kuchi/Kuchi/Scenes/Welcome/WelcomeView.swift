@@ -53,12 +53,6 @@ extension WelcomeView {
                 
                 Text("Get Started")
             }
-            
-            Text("This is the best game ever")
-                .background(Color.black)
-                .frame(width: 100, height: 50, alignment: .center)
-                .minimumScaleFactor(0.5)
-                .background(Color.yellow)
         }
         .background(WelcomeBackgroundImage())
         .foregroundColor(.pink)
