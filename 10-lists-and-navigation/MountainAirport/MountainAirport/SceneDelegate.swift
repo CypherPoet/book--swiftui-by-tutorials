@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftUI
+import CypherPoetSwiftUIKit_DataFlowUtils
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -24,11 +26,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
-            // Create the SwiftUI view that provides the window contents.
-            let contentView = EntryView()
-                .accentColor(.pink)
+            let appState = AppState()
+            let store = Store(initialState: appState, appReducer: appReducer)
             
-            window.rootViewController = UIHostingController(rootView: contentView)
+            // Create the SwiftUI view that provides the window contents.
+            let entryView = EntryView()
+                .accentColor(.pink)
+                .environmentObject(store)
+                .onAppear {
+                    store.send(.flightInfo(.load))
+                }
+            
+            window.rootViewController = UIHostingController(rootView: entryView)
             
             self.window = window
             window.makeKeyAndVisible()

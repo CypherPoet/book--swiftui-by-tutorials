@@ -20,6 +20,8 @@
 		F3AE83B8236C22940017AF2C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83B7236C22940017AF2C /* AppState.swift */; };
 		F3AE83BB236C24740017AF2C /* FlightDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83BA236C24740017AF2C /* FlightDirection.swift */; };
 		F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83BC236C24860017AF2C /* FlightStatus.swift */; };
+		F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83DF236C35E50017AF2C /* SampleData.swift */; };
+		F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83E2236C36A10017AF2C /* FlightBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		F3AE83B7236C22940017AF2C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F3AE83BA236C24740017AF2C /* FlightDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDirection.swift; sourceTree = "<group>"; };
 		F3AE83BC236C24860017AF2C /* FlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStatus.swift; sourceTree = "<group>"; };
+		F3AE83DF236C35E50017AF2C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F3AE83E2236C36A10017AF2C /* FlightBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		F3AE839A236C20240017AF2C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE83DE236C35CC0017AF2C /* Sample Data */,
 				F3AE839B236C20240017AF2C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -129,6 +134,7 @@
 		F3AE83AD236C20670017AF2C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE83E1236C36940017AF2C /* Flight Board */,
 				F3AE83AF236C209E0017AF2C /* EntryView.swift */,
 			);
 			path = Scenes;
@@ -149,6 +155,22 @@
 				F3AE83BC236C24860017AF2C /* FlightStatus.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F3AE83DE236C35CC0017AF2C /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE83DF236C35E50017AF2C /* SampleData.swift */,
+			);
+			path = "Sample Data";
+			sourceTree = "<group>";
+		};
+		F3AE83E1236C36940017AF2C /* Flight Board */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE83E2236C36A10017AF2C /* FlightBoard.swift */,
+			);
+			path = "Flight Board";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +253,13 @@
 				F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */,
 				F3AE8395236C20210017AF2C /* SceneDelegate.swift in Sources */,
 				F3AE83B8236C22940017AF2C /* AppState.swift in Sources */,
+				F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */,
 				F3AE83B2236C20F10017AF2C /* FlightInformation.swift in Sources */,
 				F3AE83B0236C209E0017AF2C /* EntryView.swift in Sources */,
 				F3AE83B6236C22850017AF2C /* FlightInformationState.swift in Sources */,
 				F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */,
 				F3AE83B4236C21120017AF2C /* FlightHistory.swift in Sources */,
+				F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */,
 				F3AE83BB236C24740017AF2C /* FlightDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

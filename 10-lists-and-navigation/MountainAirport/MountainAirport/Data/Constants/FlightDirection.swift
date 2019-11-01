@@ -13,3 +13,16 @@ public enum FlightDirection {
     case arrival
     case departure
 }
+
+
+extension FlightDirection {
+    
+    var boardName: String {
+        switch self {
+        case .arrival:
+            return "Arrivals"
+        case .departure:
+            return "Departures"
+        }
+    }
+}

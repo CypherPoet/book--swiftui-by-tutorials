@@ -38,7 +38,7 @@ public struct FlightHistory {
     
     public var flightDelayDescription: String {
         if status == .cancelled {
-            return status.displayText
+            return status.displayName
         }
         
         if timeDifference < 0 {

@@ -20,7 +20,7 @@ public enum FlightStatus: String, CaseIterable {
 
 extension FlightStatus {
     
-    var displayText: String {
+    var displayName: String {
         switch self {
         case .onTime:
             return "On Time"

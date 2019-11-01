@@ -48,7 +48,7 @@ public struct FlightInformation {
         let now = Date()
         
         if status == .cancelled {
-            return status.displayText
+            return status.displayName
         }
         
         if direction == .arrival && now > currentTime! {
@@ -58,7 +58,7 @@ public struct FlightInformation {
             return "Departed"
         }
         
-        return status.displayText
+        return status.displayName
     }
     
     

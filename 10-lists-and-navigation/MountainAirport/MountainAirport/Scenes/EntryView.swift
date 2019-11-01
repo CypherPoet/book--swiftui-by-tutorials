@@ -10,6 +10,18 @@ import SwiftUI
 
 
 struct EntryView: View {
+    @EnvironmentObject private var store: AppStore
+    
+    @State private var currentTab: Int = 0
+}
+
+
+// MARK: - Computeds
+extension EntryView {
+    
+    var flightInfo: [FlightInformation] {
+        store.state.flightInformationState.flightInfo
+    }
 }
 
 
@@ -17,7 +29,23 @@ struct EntryView: View {
 extension EntryView {
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $currentTab) {
+            FlightBoard(direction: .arrival)
+                .tabItem {
+                    Image(systemName: "icloud.and.arrow.down")
+                        .resizable()
+                    Text(FlightDirection.arrival.boardName)
+                }
+                .tag(0)
+            
+            FlightBoard(direction: .departure)
+                .tabItem {
+                    Image(systemName: "icloud.and.arrow.up")
+                    Text(FlightDirection.departure.boardName)
+                }
+                .tag(1)
+        }
+        .navigationBarTitle("Mountain Airport")
     }
 }
 
@@ -33,8 +61,10 @@ extension EntryView {
 
 // MARK: - Preview
 struct EntryView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         EntryView()
+            .accentColor(.pink)
+            .environmentObject(SampleStore.default)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 import CypherPoetSwiftUIKit_DataFlowUtils
 
 
+typealias AppStore = Store<AppState, AppAction>
 
 
 struct AppState {
@@ -17,10 +18,15 @@ struct AppState {
 }
 
 
-enum AppAction {}
+enum AppAction {
+    case flightInfo(_ action: FlightInformationAction)
+}
 
 
 // MARK: - Reducer
 let appReducer = Reducer<AppState, AppAction> { appState, action in
-    
+    switch action {
+    case let .flightInfo(action):
+        flightInformationReducer.reduce(&appState.flightInformationState, action)
+    }
 }
