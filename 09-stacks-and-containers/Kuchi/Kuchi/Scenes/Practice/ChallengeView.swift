@@ -16,6 +16,9 @@ struct ChallengeView: View {
     @ObservedObject private(set) var viewModel: ChallengeViewModel
 
     let onComplete: (() -> Void)?
+
+    @State private var isShowingAnswers = false
+    @State private var isShowingAnswerAlert = false
 }
 
 
@@ -32,23 +35,42 @@ extension ChallengeView {
 
     var body: some View {
         VStack {
-            QuestionView(question: wordAssessment?.card.word.original ?? "")
-                .frame(height: 300)
+            Button(action: {
+                self.isShowingAnswers.toggle()
+            }) {
+                QuestionView(question: wordAssessment?.card.word.original ?? "")
+                    .frame(height: 300)
+            }
 
-            ScoreView(
-                score: viewModel.currentScore,
-                maxPossibleScore: viewModel.assessments.count
-            )
+//            ScoreView(
+//                score: viewModel.currentScore,
+//                maxPossibleScore: viewModel.assessments.count
+//            )
             
-            Divider()
-            
-            ChoicesView(
-                choices: wordAssessment?.answers ?? [String](),
-                onSelect: check(selectedAnswer:)
+            if isShowingAnswers {
+                Divider()
+
+                ChoicesView(
+                    choices: wordAssessment?.answers ?? [String](),
+                    onSelect: check(selectedAnswer:)
+                )
+                .frame(height: 300)
+                .clipped()
+                .padding()
+            }
+        }
+        .alert(isPresented: $isShowingAnswerAlert) {
+            Alert(
+                title: Text(viewModel.wasPreviousAnswerCorrect ? "Correct" : "Incorrect"),
+                message: Text(viewModel.answerAlertMessage),
+                dismissButton: .default(Text("OK"), action: {
+                    if self.viewModel.isFinished {
+                        self.onComplete?()
+                    } else {
+                        self.viewModel.buildCards()
+                    }
+                })
             )
-            .frame(height: 300)
-            .clipped()
-            .padding()
         }
     }
 }
@@ -58,10 +80,9 @@ extension ChallengeView {
 extension ChallengeView {
     
     private func check(selectedAnswer: String) {
+        let isCorrect = viewModel.answer(with: selectedAnswer)
         
-        if viewModel.isFinished {
-            onComplete?()
-        }
+        isShowingAnswerAlert = true
     }
 }
 

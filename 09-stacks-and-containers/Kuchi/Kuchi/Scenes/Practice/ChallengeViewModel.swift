@@ -35,6 +35,9 @@ final class ChallengeViewModel: ObservableObject {
     @Published var cards: [WordCard] = []
     @Published var challengeState: ChallengeState = .notStarted
     @Published var submissions: [String] = []
+    
+    @Published var wasPreviousAnswerCorrect: Bool = false
+    @Published var answerAlertMessage: String = ""
 }
 
 
@@ -120,9 +123,11 @@ extension ChallengeViewModel {
             assessments[currentIndex].card.succeeded = true
             challengeState = .inProgress(currentIndex: currentIndex + 1)
             
+            answerAlertMessage = "You guessed correctly!"
             return true
         }
         
+        answerAlertMessage = "Sorry, that's incorrect."
         return false
     }
     

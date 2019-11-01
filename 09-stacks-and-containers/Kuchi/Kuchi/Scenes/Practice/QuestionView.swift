@@ -20,14 +20,15 @@ extension QuestionView {
     var body: some View {
         HStack {
             Text(question)
+                .scaledSystemFont(size: 64)
+                .allowsTightening(true)
                 .padding(.horizontal)
                 .allowsTightening(true)
-                .foregroundColor(.primary)
+                .foregroundColor(.pink)
                 .lineLimit(5)
                 .multilineTextAlignment(.center)
                 .animation(.spring())
         }
-        
     }
 }
 
@@ -36,6 +37,6 @@ extension QuestionView {
 struct QuestionView_Previews: PreviewProvider {
 
     static var previews: some View {
-        QuestionView(question: "Question")
+        QuestionView(question: "ごめんなさい")
     }
 }
