@@ -22,6 +22,7 @@
 		F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83BC236C24860017AF2C /* FlightStatus.swift */; };
 		F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83DF236C35E50017AF2C /* SampleData.swift */; };
 		F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83E2236C36A10017AF2C /* FlightBoard.swift */; };
+		F3AE83ED236D4B4A0017AF2C /* StackEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F3AE83BC236C24860017AF2C /* FlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightStatus.swift; sourceTree = "<group>"; };
 		F3AE83DF236C35E50017AF2C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F3AE83E2236C36A10017AF2C /* FlightBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoard.swift; sourceTree = "<group>"; };
+		F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StackEntryView.swift; path = MountainAirport/Scenes/StackEntryView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		F3AE83AD236C20670017AF2C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */,
 				F3AE83E1236C36940017AF2C /* Flight Board */,
 				F3AE83AF236C209E0017AF2C /* EntryView.swift */,
 			);
@@ -260,6 +263,7 @@
 				F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */,
 				F3AE83B4236C21120017AF2C /* FlightHistory.swift in Sources */,
 				F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */,
+				F3AE83ED236D4B4A0017AF2C /* StackEntryView.swift in Sources */,
 				F3AE83BB236C24740017AF2C /* FlightDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
