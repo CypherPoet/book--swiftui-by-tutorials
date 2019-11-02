@@ -30,20 +30,26 @@ extension EntryView {
 
     var body: some View {
         TabView(selection: $currentTab) {
-            FlightBoard(direction: .arrival)
-                .tabItem {
-                    Image(systemName: "icloud.and.arrow.down")
-                        .resizable()
-                    Text(FlightDirection.arrival.boardName)
-                }
-                .tag(0)
             
-            FlightBoard(direction: .departure)
-                .tabItem {
-                    Image(systemName: "icloud.and.arrow.up")
-                    Text(FlightDirection.departure.boardName)
-                }
-                .tag(1)
+            NavigationView {
+                FlightBoardContainerView(direction: .arrival)
+            }
+            .tabItem {
+                Image(systemName: "icloud.and.arrow.down")
+                    .resizable()
+                Text(FlightDirection.arrival.boardName)
+            }
+            .tag(0)
+            
+                
+            NavigationView {
+                FlightBoardContainerView(direction: .departure)
+            }
+            .tabItem {
+                Image(systemName: "icloud.and.arrow.up")
+                Text(FlightDirection.departure.boardName)
+            }
+            .tag(1)
         }
         .navigationBarTitle("Mountain Airport")
     }

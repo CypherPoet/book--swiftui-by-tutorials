@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 .accentColor(.pink)
                 .environmentObject(store)
                 .onAppear {
-                    store.send(.flightInfo(.load))
+                    store.send(FlightInformationSideEffect.load)
                 }
             
             window.rootViewController = UIHostingController(rootView: entryView)

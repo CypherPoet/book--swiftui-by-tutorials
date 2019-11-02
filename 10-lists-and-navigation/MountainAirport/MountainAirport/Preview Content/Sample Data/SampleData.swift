@@ -11,9 +11,13 @@
 import Foundation
 
 
+enum SampleFlightInformationState {
+    static let `default` = FlightInformationState(flightInfo: FlightInformation.generateFlights())
+}
+
 
 enum SampleAppState {
-    static let `default` = AppState()
+    static let `default` = AppState(flightInformationState: SampleFlightInformationState.default)
 }
 
 

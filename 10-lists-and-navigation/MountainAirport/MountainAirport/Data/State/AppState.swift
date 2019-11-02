@@ -10,9 +10,6 @@ import Foundation
 import CypherPoetSwiftUIKit_DataFlowUtils
 
 
-typealias AppStore = Store<AppState, AppAction>
-
-
 struct AppState {
     var flightInformationState = FlightInformationState()
 }
@@ -30,3 +27,5 @@ let appReducer = Reducer<AppState, AppAction> { appState, action in
         flightInformationReducer.reduce(&appState.flightInformationState, action)
     }
 }
+
+typealias AppStore = Store<AppState, AppAction>

@@ -10,16 +10,28 @@ import SwiftUI
 
 
 struct FlightBoard: View {
-    let direction: FlightDirection
+    @EnvironmentObject private var store: AppStore
+
+    @ObservedObject private(set) var viewModel: FlightBoardViewModel
 }
+
+
+// MARK: - Computeds
+extension FlightBoard {
+    
+}
+
 
 
 // MARK: - Body
 extension FlightBoard {
 
     var body: some View {
-        Text(direction.boardName)
-            .font(.largeTitle)
+        
+        List(viewModel.flightData) { flightInfo in
+            FlightBoardListItem(flightInfo: flightInfo)
+        }
+        .navigationBarTitle(viewModel.direction.boardName)
     }
 }
 
@@ -37,7 +49,9 @@ extension FlightBoard {
 struct FlightBoard_Previews: PreviewProvider {
 
     static var previews: some View {
-        FlightBoard(direction: .departure)
+        FlightBoard(
+            viewModel: .init(direction: .departure)
+        )
             .accentColor(.pink)
             .environmentObject(SampleStore.default)
     }

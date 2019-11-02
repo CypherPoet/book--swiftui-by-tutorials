@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-public struct FlightInformation {
+public struct FlightInformation: Identifiable {
     public var id: Int
     public var airline: String
     public var number: String

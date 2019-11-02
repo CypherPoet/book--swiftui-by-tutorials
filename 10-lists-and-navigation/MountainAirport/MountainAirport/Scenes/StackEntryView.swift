@@ -38,10 +38,10 @@ extension StackEntryView {
                     .rotationEffect(.radians(-.pi / 2))
                 
                 VStack {
-                    NavigationLink(destination: FlightBoard(direction: .arrival)) {
+                    NavigationLink(destination: FlightBoardContainerView(direction: .arrival)) {
                         Text(FlightDirection.arrival.boardName)
                     }
-                    NavigationLink(destination: FlightBoard(direction: .departure)) {
+                    NavigationLink(destination: FlightBoardContainerView(direction: .departure)) {
                         Text(FlightDirection.departure.boardName)
                     }
                     

@@ -8,7 +8,7 @@
 
 import Foundation
 import CypherPoetSwiftUIKit_DataFlowUtils
-
+import Combine
 
 
 struct FlightInformationState {
@@ -16,9 +16,25 @@ struct FlightInformationState {
 }
 
 
+enum FlightInformationSideEffect: SideEffect {
+    case load
+    
+    func mapToAction() -> AnyPublisher<AppAction, Never> {
+        switch self {
+        case .load:
+            return Just("")
+                .subscribe(on: DispatchQueue.global(qos: .userInitiated))
+                .map { _ in  FlightInformation.generateFlights() }
+                .map { AppAction.flightInfo(.setInfo($0)) }
+                .eraseToAnyPublisher()
+        }
+    }
+}
+
+
 
 enum FlightInformationAction {
-    case load
+    case setInfo(_ flightInfo: [FlightInformation])
 }
 
 
@@ -26,7 +42,7 @@ enum FlightInformationAction {
 let flightInformationReducer = Reducer<FlightInformationState, FlightInformationAction> {
     state, action in
     switch action {
-    case .load:
-        state.flightInfo = FlightInformation.generateFlights()
+    case let .setInfo(flightInfo):
+        state.flightInfo = flightInfo
     }
 }
