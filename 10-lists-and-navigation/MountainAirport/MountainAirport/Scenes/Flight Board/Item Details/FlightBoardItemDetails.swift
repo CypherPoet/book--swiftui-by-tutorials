@@ -10,6 +10,8 @@ import SwiftUI
 
 
 struct FlightBoardItemDetails: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     let flightInfo: FlightInformation
 }
 
@@ -40,9 +42,12 @@ extension FlightBoardItemDetails {
                 .foregroundColor(Color(flightInfo.timelineColor))
             
             Spacer()
+            
+//            Text("Presentation Mode - isPresented: \(presentationMode.wrappedValue.isPresented ? "True" : "False")")
         }
         .font(.headline)
         .padding()
+        .navigationBarItems(leading: EditButton())
     }
 }
 

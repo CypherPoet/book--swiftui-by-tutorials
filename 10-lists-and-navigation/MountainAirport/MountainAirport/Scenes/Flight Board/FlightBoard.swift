@@ -12,6 +12,8 @@ import SwiftUI
 struct FlightBoard: View {
     @EnvironmentObject private var store: AppStore
     @ObservedObject private(set) var viewModel: FlightBoardViewModel
+    
+    @State private var selectedFlightInfoItem: FlightInformation?
 }
 
 
@@ -26,11 +28,22 @@ extension FlightBoard {
 extension FlightBoard {
 
     var body: some View {
+//
+//        List(viewModel.displayedFlights) { flightInfo in
+//            NavigationLink(destination: FlightBoardItemDetails(flightInfo: flightInfo)) {
+//                FlightBoardListItem(flightInfo: flightInfo)
+//            }
+//        }
         
         List(viewModel.displayedFlights) { flightInfo in
-            NavigationLink(destination: FlightBoardItemDetails(flightInfo: flightInfo)) {
+            Button(action: {
+                self.selectedFlightInfoItem = flightInfo
+            }, label: {
                 FlightBoardListItem(flightInfo: flightInfo)
-            }
+            })
+        }
+        .sheet(item: $selectedFlightInfoItem) { flightInfo in
+            FlightBoardItemDetails(flightInfo: flightInfo)
         }
     }
 }
@@ -49,13 +62,16 @@ extension FlightBoard {
 struct FlightBoard_Previews: PreviewProvider {
 
     static var previews: some View {
-        FlightBoard(
-            viewModel: .init(
-                flightData: SampleStore.default.state.flightInformationState.flightInfo,
-                direction: .departure
+        
+        NavigationView {
+            FlightBoard(
+                viewModel: .init(
+                    flightData: SampleFlights.default,
+                    direction: .departure
+                )
             )
-        )
-            .accentColor(.pink)
-            .environmentObject(SampleStore.default)
+                .accentColor(.pink)
+                .environmentObject(SampleStore.default)
+        }
     }
 }
