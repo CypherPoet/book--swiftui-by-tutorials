@@ -34,7 +34,7 @@ extension FlightBoardListItem {
             
             Spacer()
             
-            Text("\(flightInfo.flightStatus)")
+            Text("\(flightInfo.flightBoardStatus)")
                 .frame(alignment: .trailing)
         }
     }

@@ -44,7 +44,7 @@ public struct FlightInformation: Identifiable {
     }
     
     
-    public var flightStatus: String {
+    public var flightBoardStatus: String {
         let now = Date()
         
         if status == .cancelled {

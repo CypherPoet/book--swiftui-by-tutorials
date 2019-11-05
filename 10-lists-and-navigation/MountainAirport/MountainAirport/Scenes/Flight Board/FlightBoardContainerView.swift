@@ -13,6 +13,8 @@ struct FlightBoardContainerView: View {
     @EnvironmentObject private var store: AppStore
 
     let direction: FlightDirection
+    
+    @State private var isShowingCancelledFlights = true
 }
 
 
@@ -31,10 +33,13 @@ extension FlightBoardContainerView {
     var body: some View {
         FlightBoard(
             viewModel: FlightBoardViewModel(
+                flightData: flightData,
                 direction: direction,
-                flightData: flightData
+                isShowingCancelledFlights: isShowingCancelledFlights
             )
         )
+        .navigationBarItems(trailing: showCancelledFlightsButton)
+        .navigationBarTitle(direction.boardName)
     }
 }
 
@@ -42,7 +47,13 @@ extension FlightBoardContainerView {
 // MARK: - View Variables
 extension FlightBoardContainerView {
 
-
+    private var showCancelledFlightsButton: some View {
+        Button(action: {
+            self.isShowingCancelledFlights.toggle()
+        }) {
+            Text("\(isShowingCancelledFlights ? "Hide" : "Show") Cancelled")
+        }
+    }
 }
 
 

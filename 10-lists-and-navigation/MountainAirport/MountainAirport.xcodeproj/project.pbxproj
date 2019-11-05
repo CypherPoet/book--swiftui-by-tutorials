@@ -26,6 +26,7 @@
 		F3AE83EF236D5F540017AF2C /* FlightBoardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83EE236D5F540017AF2C /* FlightBoardContainerView.swift */; };
 		F3AE83F1236D5F7D0017AF2C /* FlightBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83F0236D5F7D0017AF2C /* FlightBoardViewModel.swift */; };
 		F3AE841C236DD8140017AF2C /* FlightBoardListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE841B236DD8140017AF2C /* FlightBoardListItem.swift */; };
+		F3AE841F236DDBED0017AF2C /* FlightBoardItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F3AE83EE236D5F540017AF2C /* FlightBoardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardContainerView.swift; sourceTree = "<group>"; };
 		F3AE83F0236D5F7D0017AF2C /* FlightBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardViewModel.swift; sourceTree = "<group>"; };
 		F3AE841B236DD8140017AF2C /* FlightBoardListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardListItem.swift; sourceTree = "<group>"; };
+		F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardItemDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,12 +179,21 @@
 		F3AE83E1236C36940017AF2C /* Flight Board */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE841D236DDBBE0017AF2C /* Item Details */,
 				F3AE83E2236C36A10017AF2C /* FlightBoard.swift */,
 				F3AE841B236DD8140017AF2C /* FlightBoardListItem.swift */,
 				F3AE83EE236D5F540017AF2C /* FlightBoardContainerView.swift */,
 				F3AE83F0236D5F7D0017AF2C /* FlightBoardViewModel.swift */,
 			);
 			path = "Flight Board";
+			sourceTree = "<group>";
+		};
+		F3AE841D236DDBBE0017AF2C /* Item Details */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */,
+			);
+			path = "Item Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */,
 				F3AE8395236C20210017AF2C /* SceneDelegate.swift in Sources */,
+				F3AE841F236DDBED0017AF2C /* FlightBoardItemDetails.swift in Sources */,
 				F3AE83B8236C22940017AF2C /* AppState.swift in Sources */,
 				F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */,
 				F3AE83EF236D5F540017AF2C /* FlightBoardContainerView.swift in Sources */,
