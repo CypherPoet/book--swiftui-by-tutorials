@@ -13,6 +13,8 @@ struct FlightBoardItemDetails: View {
     @Environment(\.presentationMode) var presentationMode
     
     let flightInfo: FlightInformation
+    
+    @State private var isShowingFlightHistory = false
 }
 
 
@@ -27,26 +29,40 @@ extension FlightBoardItemDetails {
 extension FlightBoardItemDetails {
 
     var body: some View {
-        VStack(alignment: .leading) {
+        
+        VStack(spacing: 32.0) {
+            VStack(alignment: .leading) {
+
+                HStack {
+                    Text("\(flightInfo.airline) Flight \(flightInfo.number)")
+                        .font(.largeTitle)
+                    
+                    Spacer()
+                }
+                    
+                Text("\(flightInfo.direction == .arrival ? "From: " : "To: ")\(flightInfo.connectingAirport)")
+                
+                Text(flightInfo.flightBoardStatus)
+                    .foregroundColor(Color(flightInfo.timelineColor))
+            }
+            .font(.headline)
 
             HStack {
-                Text("\(flightInfo.airline) Flight \(flightInfo.number)")
-                    .font(.largeTitle)
-                
+                Spacer()
+                Button(action: {
+                    self.isShowingFlightHistory = true
+                }) {
+                    Text("Flight History")
+                }
                 Spacer()
             }
-                
-            Text("\(flightInfo.direction == .arrival ? "From: " : "To: ")\(flightInfo.connectingAirport)")
-            
-            Text(flightInfo.flightBoardStatus)
-                .foregroundColor(Color(flightInfo.timelineColor))
             
             Spacer()
-            
-//            Text("Presentation Mode - isPresented: \(presentationMode.wrappedValue.isPresented ? "True" : "False")")
         }
-        .font(.headline)
         .padding()
+        .popover(isPresented: $isShowingFlightHistory, content: {
+            Text("Flight History List")
+        })
         .navigationBarItems(leading: EditButton())
     }
 }
