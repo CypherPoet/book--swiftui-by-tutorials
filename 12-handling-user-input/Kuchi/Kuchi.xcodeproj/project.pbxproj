@@ -33,6 +33,8 @@
 		F390D40D23AFBBB900B8D6B7 /* SampleFlashCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D40C23AFBBB900B8D6B7 /* SampleFlashCardDeck.swift */; };
 		F390D40F23AFC62A00B8D6B7 /* FlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D40E23AFC62A00B8D6B7 /* FlashCardView.swift */; };
 		F390D41123AFF4C800B8D6B7 /* FlashCardDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D41023AFF4C800B8D6B7 /* FlashCardDeckView.swift */; };
+		F390D41523B0267200B8D6B7 /* FlashCardView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D41423B0267200B8D6B7 /* FlashCardView+ViewModel.swift */; };
+		F390D41823B0274700B8D6B7 /* CardDragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D41723B0274700B8D6B7 /* CardDragDirection.swift */; };
 		F39F9035235B0DE5000188A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F9034235B0DE5000188A5 /* HomeView.swift */; };
 		F3A34A82235BD83A00F7C256 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A81235BD83A00F7C256 /* ProfileView.swift */; };
 		F3A34A86235BD86700F7C256 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A34A85235BD86700F7C256 /* ProgressView.swift */; };
@@ -89,6 +91,8 @@
 		F390D40C23AFBBB900B8D6B7 /* SampleFlashCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFlashCardDeck.swift; sourceTree = "<group>"; };
 		F390D40E23AFC62A00B8D6B7 /* FlashCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardView.swift; sourceTree = "<group>"; };
 		F390D41023AFF4C800B8D6B7 /* FlashCardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardDeckView.swift; sourceTree = "<group>"; };
+		F390D41423B0267200B8D6B7 /* FlashCardView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlashCardView+ViewModel.swift"; sourceTree = "<group>"; };
+		F390D41723B0274700B8D6B7 /* CardDragDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDragDirection.swift; sourceTree = "<group>"; };
 		F39F9034235B0DE5000188A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F3A34A81235BD83A00F7C256 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F3A34A85235BD86700F7C256 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			children = (
 				F3E011C723681EAB0086C207 /* Constants */,
 				F3004175236356FF005F5FE6 /* Extensions */,
+				F390D41623B0271900B8D6B7 /* Gestures */,
 				F300416C2363457D005F5FE6 /* Styles */,
 				F3004164236277C6005F5FE6 /* View Components */,
 				F300417123635572005F5FE6 /* View Modifiers */,
@@ -158,7 +163,7 @@
 				F300416723627991005F5FE6 /* LogoImage.swift */,
 				F3004165236277E8005F5FE6 /* WelcomeBackgroundImage.swift */,
 				F3E011CE2368F21A0086C207 /* UserBanner.swift */,
-				F390D40E23AFC62A00B8D6B7 /* FlashCardView.swift */,
+				F390D41323B0264A00B8D6B7 /* Flash Card */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +282,23 @@
 				F3A5BF2C23652C1A0031FACF /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		F390D41323B0264A00B8D6B7 /* Flash Card */ = {
+			isa = PBXGroup;
+			children = (
+				F390D40E23AFC62A00B8D6B7 /* FlashCardView.swift */,
+				F390D41423B0267200B8D6B7 /* FlashCardView+ViewModel.swift */,
+			);
+			path = "Flash Card";
+			sourceTree = "<group>";
+		};
+		F390D41623B0271900B8D6B7 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				F390D41723B0274700B8D6B7 /* CardDragDirection.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 		F39F9033235B0DD0000188A5 /* Home */ = {
@@ -503,6 +525,7 @@
 				F3562F932355361F00BD7068 /* WelcomeView.swift in Sources */,
 				F3A5BF34236653D90031FACF /* CustomOutlinedButtonStyle.swift in Sources */,
 				F3DED5AE23AF93F700214716 /* LearningContainerView.swift in Sources */,
+				F390D41823B0274700B8D6B7 /* CardDragDirection.swift in Sources */,
 				F3A34AA5235DB15F00F7C256 /* ChoicesView.swift in Sources */,
 				F300417423635609005F5FE6 /* CustomRoundedTextFieldStyle.swift in Sources */,
 				F380E2FF23582B850048B6F3 /* EntryView.swift in Sources */,
@@ -522,6 +545,7 @@
 				F300416A23627A69005F5FE6 /* WelcomeMessageView.swift in Sources */,
 				F3E011E323695E980086C207 /* AppState.swift in Sources */,
 				F367BEC2235F234E00FDEB0C /* ScoreView.swift in Sources */,
+				F390D41523B0267200B8D6B7 /* FlashCardView+ViewModel.swift in Sources */,
 				F367BEB9235F045200FDEB0C /* DeckBuilder.swift in Sources */,
 				F3A34AA1235D82E400F7C256 /* ChallengeView.swift in Sources */,
 				F3E011C923681EBA0086C207 /* UserDefaultsKey.swift in Sources */,

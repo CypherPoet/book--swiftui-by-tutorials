@@ -10,9 +10,14 @@ import SwiftUI
 
 
 struct FlashCardView: View {
+    typealias CardDrag = (_ card: FlashCard, _ direction: CardDragDirection) -> Void
+    
     var viewModel: ViewModel
+    let onDrag: CardDrag
+    var dragThreshold: CGFloat = 150.0
     
     @State private var isAnswerRevealed = false
+    @State private var dragOffset: CGSize = .zero
 }
 
 
@@ -32,8 +37,10 @@ extension FlashCardView {
         .foregroundColor(.white)
         .frame(width: 320, height: 210)
         .background(cardBackground)
-        .animation(.spring())
+        .offset(dragOffset)
         .gesture(tapGesture)
+        .gesture(dragGesture)
+        .animation(.spring())
     }
 }
 
@@ -64,8 +71,39 @@ extension FlashCardView {
                 )
             }
     }
+    
+    
+    private var dragGesture: some Gesture {
+        DragGesture()
+            .onChanged { dragValue in
+                self.dragOffset = dragValue.translation
+            }
+        .onEnded { dragValue in
+            if dragValue.translation.width < -self.dragThreshold {
+                self.swipeLeft()
+            } else if dragValue.translation.width > self.dragThreshold {
+                self.swipeRight()
+            } else {
+                self.dragOffset = .zero
+            }
+        }
+    }
 }
 
+
+// MARK: - Private Helpers
+private extension FlashCardView {
+    
+    func swipeLeft() {
+        self.dragOffset = .init(width: -1000, height: 0)
+        self.onDrag(viewModel.flashCard, .left)
+    }
+    
+    func swipeRight() {
+        self.dragOffset = .init(width: 1000, height: 0)
+        self.onDrag(viewModel.flashCard, .right)
+    }
+}
 
 
 // MARK: - Preview
@@ -73,21 +111,8 @@ struct FlashCardView_Previews: PreviewProvider {
 
     static var previews: some View {
         FlashCardView(
-            viewModel: .init(flashCard: SampleFlashCard.default)
+            viewModel: .init(flashCard: SampleFlashCard.default),
+            onDrag: { (_, _) in }
         )
     }
-}
-
-
-extension FlashCardView {
-    
-    struct ViewModel {
-        var flashCard: FlashCard
-    }
-}
-
-
-extension FlashCardView.ViewModel {
-    var startingText: String { flashCard.wordCard.word.original }
-    var answerText: String { flashCard.wordCard.word.translation }
 }

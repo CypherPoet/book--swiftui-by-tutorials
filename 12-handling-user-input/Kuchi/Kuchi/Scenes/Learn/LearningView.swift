@@ -29,7 +29,7 @@ extension LearningView {
             
             FlashCardDeckView(
                 cards: viewModel.activeCards,
-                onMemorized: { self.viewModel.currentScore += 1 }
+                onMemorized: { _ in self.viewModel.currentScore += 1 }
             )
             
             
