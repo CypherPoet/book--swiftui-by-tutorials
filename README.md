@@ -35,6 +35,12 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 9: Stacks & Containers](./09-stacks-and-containers)
 
+- [Chapter 10: Lists & Navigation](./10-lists-and-navigation)
+
+- [Chapter 11: Building for Testability](./11-building-for-testability)
+
+- [Chapter 12: Handling User Input](./12-handling-user-input)
+
 
 
 
