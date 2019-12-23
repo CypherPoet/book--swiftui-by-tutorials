@@ -16,6 +16,8 @@ struct FlashCardView: View {
     let onDrag: CardDrag
     var dragThreshold: CGFloat = 150.0
     
+    @GestureState private var cardPressState = CardPressState.inactive
+    
     @State private var isAnswerRevealed = false
     @State private var dragOffset: CGSize = .zero
 }
@@ -38,8 +40,8 @@ extension FlashCardView {
         .frame(width: 320, height: 210)
         .background(cardBackground)
         .offset(dragOffset)
-        .gesture(tapGesture)
-        .gesture(dragGesture)
+        .gesture(longPressGesture)
+        .scaleEffect(cardPressState == .pressing ? 1.1 : 1.0)
         .animation(.spring())
     }
 }
@@ -73,20 +75,30 @@ extension FlashCardView {
     }
     
     
+    private var longPressGesture: some Gesture {
+        LongPressGesture(minimumDuration: 1.0)
+            .updating($cardPressState) { (isPressed, state, transaction) in
+                state = isPressed ? .pressing : .inactive
+        }
+        .simultaneously(with: tapGesture)
+        .simultaneously(with: dragGesture)
+    }
+    
+    
     private var dragGesture: some Gesture {
         DragGesture()
             .onChanged { dragValue in
                 self.dragOffset = dragValue.translation
             }
-        .onEnded { dragValue in
-            if dragValue.translation.width < -self.dragThreshold {
-                self.swipeLeft()
-            } else if dragValue.translation.width > self.dragThreshold {
-                self.swipeRight()
-            } else {
-                self.dragOffset = .zero
+            .onEnded { dragValue in
+                if dragValue.translation.width < -self.dragThreshold {
+                    self.swipeLeft()
+                } else if dragValue.translation.width > self.dragThreshold {
+                    self.swipeRight()
+                } else {
+                    self.dragOffset = .zero
+                }
             }
-        }
     }
 }
 
@@ -115,4 +127,15 @@ struct FlashCardView_Previews: PreviewProvider {
             onDrag: { (_, _) in }
         )
     }
+}
+
+
+// MARK: - CardPressState
+extension FlashCardView {
+    
+    enum CardPressState: Int {
+        case inactive
+        case pressing
+    }
+    
 }
