@@ -10,17 +10,14 @@ import SwiftUI
 
 
 struct FlightBoard: View {
-    @EnvironmentObject private var store: AppStore
     @ObservedObject private(set) var viewModel: FlightBoardViewModel
-    
-    @State private var selectedFlightInfoItem: FlightInformation?
+
+    var onFlightInfoSelected: ((FlightInformation) -> Void)? = nil
 }
 
 
 // MARK: - Computeds
-extension FlightBoard {
-    
-}
+extension FlightBoard {}
 
 
 
@@ -37,24 +34,17 @@ extension FlightBoard {
         
         List(viewModel.displayedFlights) { flightInfo in
             Button(action: {
-                self.selectedFlightInfoItem = flightInfo
-            }, label: {
+                self.onFlightInfoSelected?(flightInfo)
+            }) {
                 FlightBoardListItem(flightInfo: flightInfo)
-            })
-        }
-        .sheet(item: $selectedFlightInfoItem) { flightInfo in
-            FlightBoardItemDetails(flightInfo: flightInfo)
+            }
         }
     }
 }
 
 
 // MARK: - View Variables
-extension FlightBoard {
-
-
-
-}
+extension FlightBoard {}
 
 
 
