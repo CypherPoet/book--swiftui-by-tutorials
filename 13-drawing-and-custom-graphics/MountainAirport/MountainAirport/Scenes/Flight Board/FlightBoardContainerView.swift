@@ -15,7 +15,6 @@ struct FlightBoardContainerView: View {
     let direction: FlightDirection
     
     @State private var isShowingCancelledFlights = true
-    @State private var selectedFlightInfoItem: FlightInformation?
 }
 
 
@@ -37,12 +36,8 @@ extension FlightBoardContainerView {
                 flightData: flightData,
                 direction: direction,
                 isShowingCancelledFlights: isShowingCancelledFlights
-            ),
-            onFlightInfoSelected: flightInformationSelected(_:)
+            )
         )
-        .sheet(item: $selectedFlightInfoItem) { flightInfo in
-            FlightBoardItemDetails(flightInfo: flightInfo)
-        }
         .navigationBarItems(trailing: showCancelledFlightsButton)
         .navigationBarTitle(direction.boardName)
     }
@@ -63,10 +58,6 @@ extension FlightBoardContainerView {
 
 
 private extension FlightBoardContainerView {
-    
-    func flightInformationSelected(_ flightInfo: FlightInformation) {
-        self.selectedFlightInfoItem = flightInfo
-    }
 }
 
 

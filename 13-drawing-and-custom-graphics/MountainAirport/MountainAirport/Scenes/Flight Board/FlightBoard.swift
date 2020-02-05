@@ -13,6 +13,8 @@ struct FlightBoard: View {
     @ObservedObject private(set) var viewModel: FlightBoardViewModel
 
     var onFlightInfoSelected: ((FlightInformation) -> Void)? = nil
+    
+    @State private var selectedFlightInfoItem: FlightInformation?
 }
 
 
@@ -34,10 +36,13 @@ extension FlightBoard {
         
         List(viewModel.displayedFlights) { flightInfo in
             Button(action: {
-                self.onFlightInfoSelected?(flightInfo)
+                self.selectedFlightInfoItem = flightInfo
             }) {
                 FlightBoardListItem(flightInfo: flightInfo)
             }
+        }
+        .sheet(item: $selectedFlightInfoItem) { flightInfo in
+            FlightBoardItemDetails(flightInfo: flightInfo)
         }
     }
 }
