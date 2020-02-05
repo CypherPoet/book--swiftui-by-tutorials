@@ -27,6 +27,13 @@
 		F3AE83F1236D5F7D0017AF2C /* FlightBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE83F0236D5F7D0017AF2C /* FlightBoardViewModel.swift */; };
 		F3AE841C236DD8140017AF2C /* FlightBoardListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE841B236DD8140017AF2C /* FlightBoardListItem.swift */; };
 		F3AE841F236DDBED0017AF2C /* FlightBoardItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */; };
+		F3B6562423EAFC8400959505 /* AwardsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562323EAFC8400959505 /* AwardsContainerView.swift */; };
+		F3B6562623EAFE4500959505 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562523EAFE4500959505 /* Award.swift */; };
+		F3B6562823EAFEB900959505 /* AwardsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562723EAFEB900959505 /* AwardsState.swift */; };
+		F3B6562B23EB044400959505 /* Award+Computeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562A23EB044400959505 /* Award+Computeds.swift */; };
+		F3B6562E23EB06FF00959505 /* FirstVisitAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562D23EB06FF00959505 /* FirstVisitAwardView.swift */; };
+		F3B6563023EB176100959505 /* AwardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6562F23EB176100959505 /* AwardsListView.swift */; };
+		F3B6563223EB178C00959505 /* AwardsListView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +58,13 @@
 		F3AE83F0236D5F7D0017AF2C /* FlightBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardViewModel.swift; sourceTree = "<group>"; };
 		F3AE841B236DD8140017AF2C /* FlightBoardListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardListItem.swift; sourceTree = "<group>"; };
 		F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardItemDetails.swift; sourceTree = "<group>"; };
+		F3B6562323EAFC8400959505 /* AwardsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsContainerView.swift; sourceTree = "<group>"; };
+		F3B6562523EAFE4500959505 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		F3B6562723EAFEB900959505 /* AwardsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsState.swift; sourceTree = "<group>"; };
+		F3B6562A23EB044400959505 /* Award+Computeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Award+Computeds.swift"; sourceTree = "<group>"; };
+		F3B6562D23EB06FF00959505 /* FirstVisitAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVisitAwardView.swift; sourceTree = "<group>"; };
+		F3B6562F23EB176100959505 /* AwardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsListView.swift; sourceTree = "<group>"; };
+		F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AwardsListView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AE83B5236C22850017AF2C /* FlightInformationState.swift */,
+				F3B6562723EAFEB900959505 /* AwardsState.swift */,
 				F3AE83B7236C22940017AF2C /* AppState.swift */,
 			);
 			path = State;
@@ -130,6 +145,7 @@
 			children = (
 				F3AE83B1236C20F10017AF2C /* FlightInformation.swift */,
 				F3AE83B3236C21120017AF2C /* FlightHistory.swift */,
+				F3B6562923EB043000959505 /* Awards */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 		F3AE83AC236C20620017AF2C /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				F3B6562C23EB06E900959505 /* Views */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 		F3AE83AD236C20670017AF2C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F3B6562223EAFC4E00959505 /* Awards */,
 				F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */,
 				F3AE83E1236C36940017AF2C /* Flight Board */,
 				F3AE83AF236C209E0017AF2C /* EntryView.swift */,
@@ -194,6 +212,33 @@
 				F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */,
 			);
 			path = "Item Details";
+			sourceTree = "<group>";
+		};
+		F3B6562223EAFC4E00959505 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6562323EAFC8400959505 /* AwardsContainerView.swift */,
+				F3B6562F23EB176100959505 /* AwardsListView.swift */,
+				F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		F3B6562923EB043000959505 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6562523EAFE4500959505 /* Award.swift */,
+				F3B6562A23EB044400959505 /* Award+Computeds.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		F3B6562C23EB06E900959505 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6562D23EB06FF00959505 /* FirstVisitAwardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B6562823EAFEB900959505 /* AwardsState.swift in Sources */,
 				F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */,
+				F3B6563023EB176100959505 /* AwardsListView.swift in Sources */,
+				F3B6562623EAFE4500959505 /* Award.swift in Sources */,
 				F3AE8395236C20210017AF2C /* SceneDelegate.swift in Sources */,
 				F3AE841F236DDBED0017AF2C /* FlightBoardItemDetails.swift in Sources */,
+				F3B6562E23EB06FF00959505 /* FirstVisitAwardView.swift in Sources */,
+				F3B6563223EB178C00959505 /* AwardsListView+ViewModel.swift in Sources */,
 				F3AE83B8236C22940017AF2C /* AppState.swift in Sources */,
+				F3B6562B23EB044400959505 /* Award+Computeds.swift in Sources */,
 				F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */,
 				F3AE83EF236D5F540017AF2C /* FlightBoardContainerView.swift in Sources */,
 				F3AE83B2236C20F10017AF2C /* FlightInformation.swift in Sources */,
@@ -286,6 +337,7 @@
 				F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */,
 				F3AE83B4236C21120017AF2C /* FlightHistory.swift in Sources */,
 				F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */,
+				F3B6562423EAFC8400959505 /* AwardsContainerView.swift in Sources */,
 				F3AE83ED236D4B4A0017AF2C /* StackEntryView.swift in Sources */,
 				F3AE841C236DD8140017AF2C /* FlightBoardListItem.swift in Sources */,
 				F3AE83BB236C24740017AF2C /* FlightDirection.swift in Sources */,

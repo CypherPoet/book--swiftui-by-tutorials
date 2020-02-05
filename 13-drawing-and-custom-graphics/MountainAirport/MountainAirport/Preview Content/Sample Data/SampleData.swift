@@ -15,13 +15,25 @@ enum SampleFlights {
 }
 
 
+enum SampleAwardsState {
+    static let `default` = AwardsState(
+        earnedAwards: [.firstVisit]
+    )
+}
+
+
 enum SampleFlightInformationState {
     static let `default` = FlightInformationState(flightInfo: SampleFlights.default)
 }
 
 
+
+
 enum SampleAppState {
-    static let `default` = AppState(flightInformationState: SampleFlightInformationState.default)
+    static let `default` = AppState(
+        awardsState: SampleAwardsState.default,
+        flightInformationState: SampleFlightInformationState.default
+    )
 }
 
 
