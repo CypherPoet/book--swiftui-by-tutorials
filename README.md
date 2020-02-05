@@ -41,9 +41,11 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 12: Handling User Input](./12-handling-user-input)
 
+- [Chapter 13: Drawing & Custom Graphics](./13-drawing-and-custom-graphics)
+
 
 
 
 # Projects
 
-- (In Progress)
+- (Quite a few... but documenting is in progress 🙂)
