@@ -17,7 +17,10 @@ enum SampleFlights {
 
 enum SampleAwardsState {
     static let `default` = AwardsState(
-        earnedAwards: [.firstVisit]
+        earnedAwards: [
+            .firstVisit,
+            .rideShareToAirport,
+        ]
     )
 }
 

@@ -10,7 +10,9 @@ import SwiftUI
 
 
 struct FirstVisitAwardView {
-
+    
+    /// Scale for all content so that rotated squares don't exceed the view's  containing bounds
+    private let contentScale: CGFloat = 0.7
 }
 
 
@@ -23,14 +25,18 @@ extension FirstVisitAwardView: View {
                 ForEach(0 ..< 3, id: \.self) { index in
                     self.backgroundRectangle
                         .rotationEffect(.radians(Double(index) * (-.pi / 3)))
+                        .frame(
+                            width: geometry.size.width * self.contentScale,
+                            height: geometry.size.width * self.contentScale
+                        )
                 }
                 
                 Image(systemName: "airplane")
                     .resizable()
                     .rotationEffect(.radians(-.pi / 2))
                     .opacity(0.5)
+                    .scaleEffect(self.contentScale)
             }
-            .frame(width: geometry.size.width * 0.7, height: geometry.size.width * 0.7)
         }
     }
 }
@@ -78,9 +84,11 @@ struct FirstVisitAwardView_Previews: PreviewProvider {
         Group {
             FirstVisitAwardView()
                 .environment(\.colorScheme, .dark)
+                .frame(width: 200, height: 200)
             
             FirstVisitAwardView()
                 .environment(\.colorScheme, .light)
+                .frame(width: 200, height: 200)
         }
     }
 }

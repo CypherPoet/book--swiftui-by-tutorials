@@ -1,5 +1,5 @@
 //
-//  Award+Computeds.swift
+//  Award+BadgeView.swift
 //  MountainAirport
 //
 //  Created by CypherPoet on 2/5/20.
@@ -7,16 +7,16 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 extension Award {
-    
-    var title: String {
+    var badgeView: AnyView {
         switch self {
         case .firstVisit:
-            return "First Airport Visit"
+            return AnyView(FirstVisitAwardView())
         case .rideShareToAirport:
-            return "Ride Share to Airport"
+            return AnyView(RideShareToAirportAwardView())
         }
     }
 }
