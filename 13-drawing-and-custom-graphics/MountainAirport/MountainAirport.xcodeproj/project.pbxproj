@@ -36,6 +36,7 @@
 		F3B6563223EB178C00959505 /* AwardsListView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */; };
 		F3B6563423EB7E1600959505 /* RideShareToAirportAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */; };
 		F3B6563623EB8C9500959505 /* Award+BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563523EB8C9500959505 /* Award+BadgeView.swift */; };
+		F3B6563923EB9F3E00959505 /* AirportLoungeAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563823EB9F3E00959505 /* AirportLoungeAwardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AwardsListView+ViewModel.swift"; sourceTree = "<group>"; };
 		F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideShareToAirportAwardView.swift; sourceTree = "<group>"; };
 		F3B6563523EB8C9500959505 /* Award+BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Award+BadgeView.swift"; sourceTree = "<group>"; };
+		F3B6563823EB9F3E00959505 /* AirportLoungeAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportLoungeAwardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,10 +243,19 @@
 		F3B6562C23EB06E900959505 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F3B6562D23EB06FF00959505 /* FirstVisitAwardView.swift */,
-				F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */,
+				F3B6563723EB9F0900959505 /* Award Badges */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F3B6563723EB9F0900959505 /* Award Badges */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6562D23EB06FF00959505 /* FirstVisitAwardView.swift */,
+				F3B6563823EB9F3E00959505 /* AirportLoungeAwardView.swift */,
+				F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */,
+			);
+			path = "Award Badges";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B6563923EB9F3E00959505 /* AirportLoungeAwardView.swift in Sources */,
 				F3B6562823EAFEB900959505 /* AwardsState.swift in Sources */,
 				F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */,
 				F3B6563023EB176100959505 /* AwardsListView.swift in Sources */,

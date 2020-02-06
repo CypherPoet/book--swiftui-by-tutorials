@@ -17,6 +17,8 @@ extension Award {
             return AnyView(FirstVisitAwardView())
         case .rideShareToAirport:
             return AnyView(RideShareToAirportAwardView())
+        case .airportLoungeVisit:
+           return AnyView(AirportLoungeAwardView())
         }
     }
 }

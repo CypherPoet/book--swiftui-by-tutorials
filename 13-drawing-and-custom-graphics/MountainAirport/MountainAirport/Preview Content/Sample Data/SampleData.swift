@@ -20,6 +20,7 @@ enum SampleAwardsState {
         earnedAwards: [
             .firstVisit,
             .rideShareToAirport,
+            .airportLoungeVisit,
         ]
     )
 }

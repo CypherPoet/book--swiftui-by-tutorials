@@ -17,6 +17,8 @@ extension Award {
             return "First Airport Visit"
         case .rideShareToAirport:
             return "Ride Share to Airport"
+        case .airportLoungeVisit:
+            return "Lounge Visit"
         }
     }
 }

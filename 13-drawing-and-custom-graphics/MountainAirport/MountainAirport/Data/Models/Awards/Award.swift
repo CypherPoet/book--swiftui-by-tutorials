@@ -13,6 +13,7 @@ import Foundation
 enum Award: String {
     case firstVisit
     case rideShareToAirport
+    case airportLoungeVisit
 }
 
 
