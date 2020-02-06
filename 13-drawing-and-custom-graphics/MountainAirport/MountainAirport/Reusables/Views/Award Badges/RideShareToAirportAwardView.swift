@@ -64,7 +64,6 @@ private extension RideShareToAirportAwardView {
     func roadLinesPath(in geometry: GeometryProxy) -> some View {
         let frameSideLength = min(geometry.size.width, geometry.size.height)
         let frameMidX = frameSideLength * 0.5
-        let segmentCount = frameSideLength / 10
         
         return Path { path in
             path.move(to: CGPoint(x: frameMidX, y: 0))

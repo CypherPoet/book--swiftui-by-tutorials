@@ -42,7 +42,11 @@ extension FlightBoard {
             }
         }
         .sheet(item: $selectedFlightInfoItem) { flightInfo in
-            FlightBoardItemDetails(flightInfo: flightInfo)
+            FlightBoardItemDetails(
+                viewModel: .init(
+                    flightInfo: flightInfo
+                )
+            )
         }
     }
 }

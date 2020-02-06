@@ -37,6 +37,9 @@
 		F3B6563423EB7E1600959505 /* RideShareToAirportAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */; };
 		F3B6563623EB8C9500959505 /* Award+BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563523EB8C9500959505 /* Award+BadgeView.swift */; };
 		F3B6563923EB9F3E00959505 /* AirportLoungeAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563823EB9F3E00959505 /* AirportLoungeAwardView.swift */; };
+		F3B6563B23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563A23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift */; };
+		F3B6563E23EC979A00959505 /* FlightGateDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563D23EC979A00959505 /* FlightGateDetailsView.swift */; };
+		F3B6564023EC97A800959505 /* FlightGateDetailsView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B6563F23EC97A800959505 /* FlightGateDetailsView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideShareToAirportAwardView.swift; sourceTree = "<group>"; };
 		F3B6563523EB8C9500959505 /* Award+BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Award+BadgeView.swift"; sourceTree = "<group>"; };
 		F3B6563823EB9F3E00959505 /* AirportLoungeAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportLoungeAwardView.swift; sourceTree = "<group>"; };
+		F3B6563A23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightBoardItemDetails+ViewModel.swift"; sourceTree = "<group>"; };
+		F3B6563D23EC979A00959505 /* FlightGateDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightGateDetailsView.swift; sourceTree = "<group>"; };
+		F3B6563F23EC97A800959505 /* FlightGateDetailsView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightGateDetailsView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +221,9 @@
 		F3AE841D236DDBBE0017AF2C /* Item Details */ = {
 			isa = PBXGroup;
 			children = (
+				F3B6563C23EC978B00959505 /* Gate Details */,
 				F3AE841E236DDBED0017AF2C /* FlightBoardItemDetails.swift */,
+				F3B6563A23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift */,
 			);
 			path = "Item Details";
 			sourceTree = "<group>";
@@ -256,6 +264,15 @@
 				F3B6563323EB7E1600959505 /* RideShareToAirportAwardView.swift */,
 			);
 			path = "Award Badges";
+			sourceTree = "<group>";
+		};
+		F3B6563C23EC978B00959505 /* Gate Details */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6563D23EC979A00959505 /* FlightGateDetailsView.swift */,
+				F3B6563F23EC97A800959505 /* FlightGateDetailsView+ViewModel.swift */,
+			);
+			path = "Gate Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +354,7 @@
 			files = (
 				F3B6563923EB9F3E00959505 /* AirportLoungeAwardView.swift in Sources */,
 				F3B6562823EAFEB900959505 /* AwardsState.swift in Sources */,
+				F3B6563E23EC979A00959505 /* FlightGateDetailsView.swift in Sources */,
 				F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */,
 				F3B6563023EB176100959505 /* AwardsListView.swift in Sources */,
 				F3B6562623EAFE4500959505 /* Award.swift in Sources */,
@@ -349,11 +367,13 @@
 				F3B6562B23EB044400959505 /* Award+Computeds.swift in Sources */,
 				F3AE83E0236C35E50017AF2C /* SampleData.swift in Sources */,
 				F3B6563423EB7E1600959505 /* RideShareToAirportAwardView.swift in Sources */,
+				F3B6564023EC97A800959505 /* FlightGateDetailsView+ViewModel.swift in Sources */,
 				F3AE83EF236D5F540017AF2C /* FlightBoardContainerView.swift in Sources */,
 				F3AE83B2236C20F10017AF2C /* FlightInformation.swift in Sources */,
 				F3AE83B0236C209E0017AF2C /* EntryView.swift in Sources */,
 				F3AE83F1236D5F7D0017AF2C /* FlightBoardViewModel.swift in Sources */,
 				F3AE83B6236C22850017AF2C /* FlightInformationState.swift in Sources */,
+				F3B6563B23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift in Sources */,
 				F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */,
 				F3AE83B4236C21120017AF2C /* FlightHistory.swift in Sources */,
 				F3AE83E3236C36A10017AF2C /* FlightBoard.swift in Sources */,

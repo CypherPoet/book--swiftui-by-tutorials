@@ -12,57 +12,31 @@ import SwiftUI
 struct FlightBoardItemDetails: View {
     @Environment(\.presentationMode) var presentationMode
     
-    let flightInfo: FlightInformation
+    @ObservedObject var viewModel: ViewModel
     
-    @State private var isShowingFlightHistory = false
+    @State private var isShowingDetailsDropdown = true
 }
 
 
 // MARK: - Computeds
-extension FlightBoardItemDetails {
-
-
-}
+extension FlightBoardItemDetails {}
 
 
 // MARK: - Body
 extension FlightBoardItemDetails {
 
     var body: some View {
-        
-        VStack(spacing: 32.0) {
-            VStack(alignment: .leading) {
-
-                HStack {
-                    Text("\(flightInfo.airline) Flight \(flightInfo.number)")
-                        .font(.largeTitle)
-                    
-                    Spacer()
-                }
-                    
-                Text("\(flightInfo.direction == .arrival ? "From: " : "To: ")\(flightInfo.connectingAirport)")
-                
-                Text(flightInfo.flightBoardStatus)
-                    .foregroundColor(Color(flightInfo.timelineColor))
-            }
-            .font(.headline)
-
-            HStack {
-                Spacer()
-                Button(action: {
-                    self.isShowingFlightHistory = true
-                }) {
-                    Text("Flight History")
-                }
-                Spacer()
-            }
+        VStack(alignment: .leading, spacing: 32.0) {
+            infoHeaderSection
+            dropdownToggleSection
             
-            Spacer()
+            if isShowingDetailsDropdown {
+                FlightGateDetailsView(
+                    viewModel: .init(flightInfo: viewModel.flightInfo)
+                )
+            }
         }
         .padding()
-        .popover(isPresented: $isShowingFlightHistory, content: {
-            Text("Flight History List")
-        })
         .navigationBarItems(leading: EditButton())
     }
 }
@@ -71,7 +45,38 @@ extension FlightBoardItemDetails {
 // MARK: - View Variables
 extension FlightBoardItemDetails {
 
-
+    private var infoHeaderSection: some View {
+        VStack(alignment: .leading) {
+            Text(viewModel.flightHeaderHeadlineText)
+                .font(.largeTitle)
+            
+            Text(viewModel.flightDirectionHeaderText)
+            
+            Text(viewModel.flightStatusText)
+                .foregroundColor(viewModel.flightStatusTextColor)
+        }
+        .font(.headline)
+    }
+    
+    
+    private var dropdownToggleSection: some View {
+        Button(action: {
+            self.isShowingDetailsDropdown = true
+        }) {
+            HStack {
+                Text(self.isShowingDetailsDropdown ? "Hide Details" : "Show Details")
+                
+                Spacer()
+                
+                Image(systemName: "chevron.up.square")
+                    .resizable()
+                    .scaledToFit()
+                    .rotationEffect(.radians(self.isShowingDetailsDropdown ? 0 : .pi))
+                    .animation(.easeInOut(duration: 0.4))
+                    .frame(width: 40, height: 40)
+            }
+        }
+    }
 }
 
 
@@ -80,7 +85,11 @@ extension FlightBoardItemDetails {
 struct FlightBoardItemDetails_Previews: PreviewProvider {
 
     static var previews: some View {
-        FlightBoardItemDetails(flightInfo: SampleFlightInformationState.default.flightInfo[0])
-            .accentColor(.pink)
+        FlightBoardItemDetails(
+            viewModel: .init(
+                flightInfo: SampleFlightInformationState.default.flightInfo[0]
+            )
+        )
+        .accentColor(.pink)
     }
 }
