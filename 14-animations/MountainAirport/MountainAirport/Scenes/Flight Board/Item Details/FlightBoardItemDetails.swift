@@ -30,11 +30,23 @@ extension FlightBoardItemDetails {
             infoHeaderSection
             dropdownToggleSection
             
-            if isShowingDetailsDropdown {
                 FlightGateDetailsView(
                     viewModel: .init(flightInfo: viewModel.flightInfo)
                 )
-            }
+                .offset(x: isShowingDetailsDropdown ? 0 : -UIScreen.main.bounds.width)
+                .animation(
+//                    Animation.interpolatingSpring(
+//                        mass: 1.23,
+//                        stiffness: 28,
+//                        damping: 20,
+//                        initialVelocity: 8.0
+//                    )
+                    Animation.spring(
+                        response: 0.54,
+                        dampingFraction: 0.69,
+                        blendDuration: 0.2
+                    )
+                )
         }
         .padding()
         .navigationBarItems(leading: EditButton())
@@ -61,7 +73,7 @@ extension FlightBoardItemDetails {
     
     private var dropdownToggleSection: some View {
         Button(action: {
-            self.isShowingDetailsDropdown = true
+            self.isShowingDetailsDropdown.toggle()
         }) {
             HStack {
                 Text(self.isShowingDetailsDropdown ? "Hide Details" : "Show Details")
