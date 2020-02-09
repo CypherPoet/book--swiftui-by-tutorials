@@ -12,14 +12,43 @@ import SwiftUI
 struct FlightBoardItemDetails: View {
     @Environment(\.presentationMode) var presentationMode
     
+    private let toggleButtonAnimationDuration: Double = 0.34
+    
     @ObservedObject var viewModel: ViewModel
     
-    @State private var isShowingDetailsDropdown = true
+    @State private var isShowingGateDetails = false
 }
 
 
 // MARK: - Computeds
-extension FlightBoardItemDetails {}
+extension FlightBoardItemDetails {
+    
+    var gateDetailsEntranceAnimation: Animation {
+        Animation.spring(
+            response: 0.54,
+            dampingFraction: 0.69,
+            blendDuration: 0.2
+        )
+    }
+    
+    var gateDetailsExitAnimation: Animation {
+        Animation.easeOut
+    }
+    
+    
+    var gateDetailsViewTransition: AnyTransition {
+        .asymmetric(
+            insertion: AnyTransition
+                .move(edge: .bottom)
+                .combined(with: .opacity)
+                .combined(with: .scale(scale: 0, anchor: .top)),
+            removal: AnyTransition
+                .scale(scale: 1, anchor: .center)
+                .combined(with: .opacity)
+        )
+        
+    }
+}
 
 
 // MARK: - Body
@@ -30,23 +59,21 @@ extension FlightBoardItemDetails {
             infoHeaderSection
             dropdownToggleSection
             
+//            FlightGateDetailsView(
+//                viewModel: .init(flightInfo: viewModel.flightInfo)
+//            )
+//            .offset(x: isShowingGateDetails ? 0 : -UIScreen.main.bounds.width)
+//            .animation(gateDetailsEntranceAnimation)
+            
+            if isShowingGateDetails {
                 FlightGateDetailsView(
                     viewModel: .init(flightInfo: viewModel.flightInfo)
                 )
-                .offset(x: isShowingDetailsDropdown ? 0 : -UIScreen.main.bounds.width)
-                .animation(
-//                    Animation.interpolatingSpring(
-//                        mass: 1.23,
-//                        stiffness: 28,
-//                        damping: 20,
-//                        initialVelocity: 8.0
-//                    )
-                    Animation.spring(
-                        response: 0.54,
-                        dampingFraction: 0.69,
-                        blendDuration: 0.2
-                    )
-                )
+                .transition(gateDetailsViewTransition)
+            }
+            
+            Spacer()
+            
         }
         .padding()
         .navigationBarItems(leading: EditButton())
@@ -73,19 +100,23 @@ extension FlightBoardItemDetails {
     
     private var dropdownToggleSection: some View {
         Button(action: {
-            self.isShowingDetailsDropdown.toggle()
+            withAnimation(
+                self.isShowingGateDetails ? self.gateDetailsExitAnimation : self.gateDetailsEntranceAnimation
+            ) {
+                self.isShowingGateDetails.toggle()
+            }
         }) {
             HStack {
-                Text(self.isShowingDetailsDropdown ? "Hide Details" : "Show Details")
+                Text(self.isShowingGateDetails ? "Hide Details" : "Show Details")
+                    .fixedSize(horizontal: true, vertical: false)
                 
                 Spacer()
                 
                 Image(systemName: "chevron.up.square")
-                    .resizable()
-                    .scaledToFit()
-                    .rotationEffect(.radians(self.isShowingDetailsDropdown ? 0 : .pi))
-                    .animation(.easeInOut(duration: 0.4))
-                    .frame(width: 40, height: 40)
+                    .scaleEffect(self.isShowingGateDetails ? 2 : 1.5)
+                    .animation(.spring())
+                    .rotationEffect(.radians(self.isShowingGateDetails ? 0 : .pi))
+                    .animation(gateDetailsExitAnimation)
             }
         }
     }
