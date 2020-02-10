@@ -43,7 +43,9 @@ _Projects, playgrounds, and other materials made while following along with the 
 
 - [Chapter 13: Drawing & Custom Graphics](./13-drawing-and-custom-graphics)
 
+- [Chapter 14: Animations](./14-animations)
 
+- [Chapter 15: Complex Interfaces](./15-complex-interfaces)
 
 
 # Projects
