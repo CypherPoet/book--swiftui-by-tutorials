@@ -27,27 +27,16 @@ extension FlightBoard {}
 extension FlightBoard {
 
     var body: some View {
-//
-//        List(viewModel.displayedFlights) { flightInfo in
-//            NavigationLink(destination: FlightBoardItemDetails(flightInfo: flightInfo)) {
-//                FlightBoardListItem(flightInfo: flightInfo)
-//            }
-//        }
         
-        ZStack(alignment: .topLeading) {
-            List(viewModel.displayedFlights) { flightInfo in
-                Button(action: {
-                    self.selectedFlightInfoItem = flightInfo
-                }) {
-                    FlightBoardListItem(flightInfo: flightInfo)
-                }
+        List(viewModel.displayedFlights) { flightInfo in
+            Button(action: {
+                self.selectedFlightInfoItem = flightInfo
+            }) {
+//                    FlightBoardListItem(flightInfo: flightInfo)
+                FlightBoardTimelineListItemView(
+                    viewModel: .init(flightInfo: flightInfo)
+                )
             }
-            
-  // TODO: Create track for timeline view
-//            Rectangle()
-//                .fill(Color.black)
-//                .frame(width: 2, height: 200)
-//                .offset(x: 20)
         }
         .sheet(item: $selectedFlightInfoItem) { flightInfo in
             FlightBoardItemDetails(
