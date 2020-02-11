@@ -29,6 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let appState = AppState()
             let store = Store(initialState: appState, appReducer: appReducer)
             
+            #if targetEnvironment(simulator)
+            store.send(.awards(.earnedAwardsSet(SampleAwardsState.default.earnedAwards)))
+            #endif
+            
             // Create the SwiftUI view that provides the window contents.
             let entryView = EntryView()
                 .accentColor(.pink)

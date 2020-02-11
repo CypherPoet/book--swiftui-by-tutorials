@@ -18,7 +18,7 @@ struct AwardsContainerView {
 extension AwardsContainerView: View {
 
     var body: some View {
-        AwardsListView(
+        AwardsGridView(
             viewModel: .init(awardsState: awardsState)
         )
     }

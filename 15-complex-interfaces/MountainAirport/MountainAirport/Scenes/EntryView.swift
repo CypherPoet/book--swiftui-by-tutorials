@@ -40,8 +40,8 @@ extension EntryView {
                 Text(FlightDirection.arrival.boardName)
             }
             .tag(0)
-            
-                
+
+
             NavigationView {
                 FlightBoardContainerView(direction: .departure)
             }
@@ -50,15 +50,14 @@ extension EntryView {
                 Text(FlightDirection.departure.boardName)
             }
             .tag(1)
-            
-            
+
+
             AwardsContainerView()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Awards")
                 }
-                .tag(1)
-            
+                .tag(2)
             
         }
         .navigationBarTitle("Mountain Airport")

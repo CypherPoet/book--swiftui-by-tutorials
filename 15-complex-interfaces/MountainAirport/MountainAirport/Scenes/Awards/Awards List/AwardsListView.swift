@@ -11,7 +11,7 @@ import CypherPoetSwiftUIKit
 
 
 struct AwardsListView {
-    @ObservedObject var viewModel: ViewModel
+    var viewModel: ViewModel
 }
 
 

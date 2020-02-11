@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		F307B6E023F13FF200FA264E /* FlightBoardTimelineListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6DF23F13FF200FA264E /* FlightBoardTimelineListItemView.swift */; };
 		F307B6E223F1405500FA264E /* FlightBoardTimelineListItemView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6E123F1405500FA264E /* FlightBoardTimelineListItemView+ViewModel.swift */; };
+		F307B6EA23F1974800FA264E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6E923F1974800FA264E /* GridView.swift */; };
+		F307B6EB23F198DD00FA264E /* AwardsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6E623F1937F00FA264E /* AwardsGridView.swift */; };
+		F307B6EC23F198E000FA264E /* AwardsGridView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6E723F193A100FA264E /* AwardsGridView+ViewModel.swift */; };
+		F307B6EF23F1A0E900FA264E /* Burritos in Frameworks */ = {isa = PBXBuildFile; productRef = F307B6EE23F1A0E900FA264E /* Burritos */; };
+		F307B6F123F290CC00FA264E /* GridViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6F023F290CC00FA264E /* GridViewDemo.swift */; };
+		F307B6F323F2959800FA264E /* DemoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F307B6F223F2959800FA264E /* DemoIntroView.swift */; };
 		F3AE8393236C20210017AF2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8392236C20210017AF2C /* AppDelegate.swift */; };
 		F3AE8395236C20210017AF2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE8394236C20210017AF2C /* SceneDelegate.swift */; };
 		F3AE8399236C20240017AF2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AE8398236C20240017AF2C /* Assets.xcassets */; };
@@ -47,6 +53,11 @@
 /* Begin PBXFileReference section */
 		F307B6DF23F13FF200FA264E /* FlightBoardTimelineListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardTimelineListItemView.swift; sourceTree = "<group>"; };
 		F307B6E123F1405500FA264E /* FlightBoardTimelineListItemView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightBoardTimelineListItemView+ViewModel.swift"; sourceTree = "<group>"; };
+		F307B6E623F1937F00FA264E /* AwardsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsGridView.swift; sourceTree = "<group>"; };
+		F307B6E723F193A100FA264E /* AwardsGridView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AwardsGridView+ViewModel.swift"; sourceTree = "<group>"; };
+		F307B6E923F1974800FA264E /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		F307B6F023F290CC00FA264E /* GridViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewDemo.swift; sourceTree = "<group>"; };
+		F307B6F223F2959800FA264E /* DemoIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoIntroView.swift; sourceTree = "<group>"; };
 		F3AE838F236C20210017AF2C /* MountainAirport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountainAirport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE8392236C20210017AF2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AE8394236C20210017AF2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F307B6EF23F1A0E900FA264E /* Burritos in Frameworks */,
 				F3AE83A8236C204F0017AF2C /* CypherPoetSwiftUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +115,32 @@
 				F307B6E123F1405500FA264E /* FlightBoardTimelineListItemView+ViewModel.swift */,
 			);
 			path = "List Item";
+			sourceTree = "<group>";
+		};
+		F307B6E323F1934900FA264E /* Awards List */ = {
+			isa = PBXGroup;
+			children = (
+				F3B6562F23EB176100959505 /* AwardsListView.swift */,
+				F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */,
+			);
+			path = "Awards List";
+			sourceTree = "<group>";
+		};
+		F307B6E523F1936F00FA264E /* Awards Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F307B6E623F1937F00FA264E /* AwardsGridView.swift */,
+				F307B6E723F193A100FA264E /* AwardsGridView+ViewModel.swift */,
+			);
+			path = "Awards Grid";
+			sourceTree = "<group>";
+		};
+		F307B6E823F1973700FA264E /* Grid View */ = {
+			isa = PBXGroup;
+			children = (
+				F307B6E923F1974800FA264E /* GridView.swift */,
+			);
+			path = "Grid View";
 			sourceTree = "<group>";
 		};
 		F3AE8386236C20210017AF2C = {
@@ -187,10 +225,12 @@
 		F3AE83AD236C20670017AF2C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F3B6562223EAFC4E00959505 /* Awards */,
-				F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */,
-				F3AE83E1236C36940017AF2C /* Flight Board */,
 				F3AE83AF236C209E0017AF2C /* EntryView.swift */,
+				F307B6F023F290CC00FA264E /* GridViewDemo.swift */,
+				F307B6F223F2959800FA264E /* DemoIntroView.swift */,
+				F3AE83EC236D4B4A0017AF2C /* StackEntryView.swift */,
+				F3B6562223EAFC4E00959505 /* Awards */,
+				F3AE83E1236C36940017AF2C /* Flight Board */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -246,8 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				F3B6562323EAFC8400959505 /* AwardsContainerView.swift */,
-				F3B6562F23EB176100959505 /* AwardsListView.swift */,
-				F3B6563123EB178C00959505 /* AwardsListView+ViewModel.swift */,
+				F307B6E523F1936F00FA264E /* Awards Grid */,
+				F307B6E323F1934900FA264E /* Awards List */,
 			);
 			path = Awards;
 			sourceTree = "<group>";
@@ -265,6 +305,7 @@
 		F3B6562C23EB06E900959505 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F307B6E823F1973700FA264E /* Grid View */,
 				F3B6563723EB9F0900959505 /* Award Badges */,
 			);
 			path = Views;
@@ -307,6 +348,7 @@
 			name = MountainAirport;
 			packageProductDependencies = (
 				F3AE83A7236C204F0017AF2C /* CypherPoetSwiftUIKit */,
+				F307B6EE23F1A0E900FA264E /* Burritos */,
 			);
 			productName = MountainAirport;
 			productReference = F3AE838F236C20210017AF2C /* MountainAirport.app */;
@@ -338,6 +380,7 @@
 			mainGroup = F3AE8386236C20210017AF2C;
 			packageReferences = (
 				F3AE83A6236C204F0017AF2C /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */,
+				F307B6ED23F1A0E900FA264E /* XCRemoteSwiftPackageReference "Burritos" */,
 			);
 			productRefGroup = F3AE8390236C20210017AF2C /* Products */;
 			projectDirPath = "";
@@ -376,6 +419,8 @@
 				F3AE8395236C20210017AF2C /* SceneDelegate.swift in Sources */,
 				F3AE841F236DDBED0017AF2C /* FlightBoardItemDetails.swift in Sources */,
 				F3B6562E23EB06FF00959505 /* FirstVisitAwardView.swift in Sources */,
+				F307B6EA23F1974800FA264E /* GridView.swift in Sources */,
+				F307B6EB23F198DD00FA264E /* AwardsGridView.swift in Sources */,
 				F3B6563223EB178C00959505 /* AwardsListView+ViewModel.swift in Sources */,
 				F3AE83B8236C22940017AF2C /* AppState.swift in Sources */,
 				F3B6563623EB8C9500959505 /* Award+BadgeView.swift in Sources */,
@@ -387,6 +432,7 @@
 				F3AE83B2236C20F10017AF2C /* FlightInformation.swift in Sources */,
 				F3AE83B0236C209E0017AF2C /* EntryView.swift in Sources */,
 				F3AE83F1236D5F7D0017AF2C /* FlightBoardViewModel.swift in Sources */,
+				F307B6F123F290CC00FA264E /* GridViewDemo.swift in Sources */,
 				F3AE83B6236C22850017AF2C /* FlightInformationState.swift in Sources */,
 				F3B6563B23EBB15E00959505 /* FlightBoardItemDetails+ViewModel.swift in Sources */,
 				F3AE83BD236C24860017AF2C /* FlightStatus.swift in Sources */,
@@ -395,7 +441,9 @@
 				F3B6562423EAFC8400959505 /* AwardsContainerView.swift in Sources */,
 				F307B6E223F1405500FA264E /* FlightBoardTimelineListItemView+ViewModel.swift in Sources */,
 				F3AE83ED236D4B4A0017AF2C /* StackEntryView.swift in Sources */,
+				F307B6EC23F198E000FA264E /* AwardsGridView+ViewModel.swift in Sources */,
 				F3AE841C236DD8140017AF2C /* FlightBoardListItem.swift in Sources */,
+				F307B6F323F2959800FA264E /* DemoIntroView.swift in Sources */,
 				F3AE83BB236C24740017AF2C /* FlightDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +640,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F307B6ED23F1A0E900FA264E /* XCRemoteSwiftPackageReference "Burritos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guillermomuntaner/Burritos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 		F3AE83A6236C204F0017AF2C /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CypherPoet/CypherPoetSwiftUIKit.git";
@@ -603,6 +659,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F307B6EE23F1A0E900FA264E /* Burritos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F307B6ED23F1A0E900FA264E /* XCRemoteSwiftPackageReference "Burritos" */;
+			productName = Burritos;
+		};
 		F3AE83A7236C204F0017AF2C /* CypherPoetSwiftUIKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3AE83A6236C204F0017AF2C /* XCRemoteSwiftPackageReference "CypherPoetSwiftUIKit" */;
