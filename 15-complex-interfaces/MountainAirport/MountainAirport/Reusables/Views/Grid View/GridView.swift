@@ -7,26 +7,28 @@
 //
 
 import SwiftUI
-import CypherPoetSwiftUIKit
-import Clamping
 
 
 struct GridView<Item, Content: View> {
-    var items: [Item]
-    
-    @Clamping(wrappedValue: 2, range: 1...Int.max)
-    var columnCount: Int
-    
+    let items: [Item]
+    let columnCount: Int
     let content: (CGFloat, Item) -> Content
+    let scrollAxes: Axis.Set
+    let showsScrollIndicators: Bool
     
     
+    // MARK: - Init
     init(
         items: [Item] = [],
         columnCount: Int = 2,
+        scrollAxes: Axis.Set = [.vertical],
+        showsScrollIndicators: Bool = false,
         @ViewBuilder content: @escaping ((CGFloat, Item) -> Content)
     ) {
         self.items = items
-        self._columnCount.wrappedValue = columnCount
+        self.columnCount = columnCount
+        self.scrollAxes = scrollAxes
+        self.showsScrollIndicators = showsScrollIndicators
         self.content = content
     }
 }
@@ -36,14 +38,15 @@ struct GridView<Item, Content: View> {
 extension GridView: View {
 
     var body: some View {
-        GeometryReader { geometry in
-            VStack(spacing: 0) {
-                ForEach(0 ..< self.rowCount, id: \.self) { row in
-                    self.gridRow(at: row, in: geometry)
+        ScrollView(scrollAxes, showsIndicators: showsScrollIndicators) {
+            GeometryReader { geometry in
+                VStack(spacing: 0) {
+                    ForEach(0 ..< self.rowCount, id: \.self) { row in
+                        self.gridRow(at: row, in: geometry)
+                    }
                 }
             }
         }
-        .embedInScrollView(axes: .vertical, showsIndicators: false)
     }
 }
 
@@ -51,11 +54,6 @@ extension GridView: View {
 // MARK: - Computeds
 extension GridView {
     var rowCount: Int { ((items.count - 1) / columnCount) + 1 }
-}
-
-
-// MARK: - View Variables
-extension GridView {
 }
 
 
